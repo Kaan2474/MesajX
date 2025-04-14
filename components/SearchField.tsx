@@ -10,6 +10,25 @@ type Props = {
 
 export default function SearchField({ label }: Props) {
 
+    if (label === "Suche Chat...") {
+        return (
+            <GestureHandlerRootView style={[styles.inputContainer, {width: 303.5}, {marginRight: 12.5}]}>
+                <AntDesign name="search1" size={20} style={styles.icon} />
+                <TextInput
+                style={styles.input}
+                autoCapitalize='none'
+                autoCorrect={false}
+                inputMode='text'
+                maxLength={20}
+                placeholder={label}
+                placeholderTextColor={"#E5E9F0"}
+                returnKeyType='done'
+                selectionColor={"#30C5FF"}>
+                </TextInput>
+        </GestureHandlerRootView>
+      );
+    }
+
     return (
         <GestureHandlerRootView style={styles.inputContainer}>
             <AntDesign name="search1" size={20} style={styles.icon} />
