@@ -2,8 +2,6 @@ import { Tabs } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
-
-
 export default function TabLayout() {
   return (
     <Tabs
@@ -22,6 +20,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Chats',
+          headerTintColor: "#1F2227",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'chatbubbles-sharp' : 'chatbubbles-outline'} color={color} size={24} />
           ),
