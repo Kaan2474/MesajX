@@ -1,12 +1,9 @@
 import React from 'react';
-import { Text, View, StyleSheet, Platform, FlatList } from "react-native";
-import { Link } from "expo-router";
-import Button from '@/components/Button';
+import { View, StyleSheet, FlatList } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import SearchField from '@/components/SearchField';
 import ButtonWithIcon from '@/components/ButtonWithIcon';
-import InputField from '@/components/InputField';
-import ProfilePicture from '@/components/ProfilePicture';
+
 import Logo from '@/components/Logo';
 import ChatContainer from '@/components/ChatContainer';
 
@@ -110,22 +107,18 @@ export default function Index() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
 
-        <View>
-          <Logo imgSource={PlaceholderImage}/>
+        <Logo imgSource={PlaceholderImage}/>
+
+        <View style={styles.searchBarAndButtonWithIconContainer}>
+          <SearchField label="Suche Chat..." />
+          <ButtonWithIcon />
         </View>
 
-      <View style={styles.searchBarAndButtonWithIconContainer}>
-        <SearchField label="Suche Chat..." />
-        <ButtonWithIcon />
-      </View>
-
-    <View style={{alignItems: "center"}}>
-    <FlatList
-        data={DATA}
-        renderItem={({item}) => <ChatContainer name={item.name} time={item.time} message={item.message} unreadMessages={item.unreadMessages} isOnline={item.isOnline} initials={item.initials}/>}
-        keyExtractor={item => item.id}
-      />
-    </View>
+        <FlatList
+          data={DATA}
+          renderItem={({item}) => <ChatContainer name={item.name} time={item.time} message={item.message} unreadMessages={item.unreadMessages} isOnline={item.isOnline} initials={item.initials}/>}
+          keyExtractor={item => item.id}
+        />
 
       </SafeAreaView>
     </SafeAreaProvider>
@@ -144,22 +137,4 @@ const styles = StyleSheet.create({
     width: 360,
     justifyContent: "space-between"
   },
-  time: {
-    fontSize: 16,
-    color: "#E5E9F0",
-    top: 10
-  },
-  title: {
-    fontSize: 20,
-    color: "#E5E9F0",
-    bottom: 10
-  },
-  message: {
-    fontSize: 16,
-    color: "#E5E9F0"
-  },
-  unreadMessages: {
-    fontSize: 16,
-    color: "#fff",
-  }
 });
