@@ -1,16 +1,12 @@
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 import Entypo from '@expo/vector-icons/Entypo';
 
-type Props = {
-  label: string;
-};
-
-export default function ButtonWithIcon({ label }: Props) {
+export default function ButtonWithIcon() {
 
   return (
     <View style={styles.buttonContainer}>
       <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
-        <Entypo name="new-message" size={28} color="#30C5FF" />
+        <Entypo name="new-message" size={24} color="#30C5FF" />
       </Pressable>
     </View>
   );
@@ -19,7 +15,7 @@ export default function ButtonWithIcon({ label }: Props) {
 const styles = StyleSheet.create({
   buttonContainer: {
     width: 44,
-    height: 46,
+    height: 40,
   },
   button: {
     borderRadius: 10,
