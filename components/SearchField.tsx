@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { TextInput } from "react-native-gesture-handler";
 import AntDesign from '@expo/vector-icons/AntDesign';
@@ -12,59 +12,63 @@ export default function SearchField({ label }: Props) {
 
     if (label === "Suche Chat...") {
         return (
-            <GestureHandlerRootView style={[styles.inputContainer, {width: 303.5}, {marginRight: 12.5}]}>
-                <AntDesign name="search1" size={20} style={styles.icon} />
+            <GestureHandlerRootView style={[styles.inputContainer, {width: 303.5}]}>
+              <View style={styles.iconContainer}>
+                <AntDesign name="search1" size={16} color={"#30C5FF"} />
+              </View>
+              <View style={styles.labelContainer}>
                 <TextInput
-                style={styles.input}
-                autoCapitalize='none'
+                style={styles.searchChatText}
                 autoCorrect={false}
                 inputMode='text'
-                maxLength={20}
                 placeholder={label}
                 placeholderTextColor={"#E5E9F0"}
                 returnKeyType='done'
                 selectionColor={"#30C5FF"}>
                 </TextInput>
+              </View>
         </GestureHandlerRootView>
       );
     }
 
     return (
         <GestureHandlerRootView style={styles.inputContainer}>
-            <AntDesign name="search1" size={20} style={styles.icon} />
+          <View style={styles.iconContainer}>
+            <AntDesign name="search1" size={16} color={"#30C5FF"} />
+          </View>
+          <View style={styles.labelContainer}>
             <TextInput
-            style={styles.input}
-            autoCapitalize='none'
-            autoCorrect={false}
-            inputMode='text'
-            maxLength={20}
-            placeholder={label}
-            placeholderTextColor={"#E5E9F0"}
-            returnKeyType='done'
-            selectionColor={"#30C5FF"}>
+              style={styles.searchChatText}
+              autoCorrect={false}
+              inputMode='text'
+              placeholder={label}
+              placeholderTextColor={"#E5E9F0"}
+              returnKeyType='done'
+              selectionColor={"#30C5FF"}>
             </TextInput>
+          </View>
     </GestureHandlerRootView>
   );
 }
 
 const styles = StyleSheet.create({
     inputContainer: {
-        height: 46,
+        height: 40,
         width: 360,
         flexDirection: 'row',
         borderRadius: 10,
         backgroundColor: '#4A5160',
+        alignItems: "center",
     },
-    icon: {
-        top: 12,
-        left: 10,
-        marginRight: 20,
-        color: "#30C5FF",
+    iconContainer: {
+      left: 7.5,
     },
-    input: {
+    labelContainer: {
+      left: 15,
+      width: "85%",
+    },
+    searchChatText: {
         color: '#E5E9F0',
-        fontSize: 16,
-        width: '87.5%',
-        
+        fontSize: 14,
       },
 });
