@@ -19,6 +19,42 @@ const DATA = [
     isOnline: false,
     initials: "AC"
   },
+  {
+    id: '3',
+    name: 'Lars Daumann',
+    isOnline: false,
+    initials: "LD"
+  },
+  {
+    id: '4',
+    name: 'Dikran Artin',
+    isOnline: true,
+    initials: "DA"
+  },
+  {
+    id: '5',
+    name: 'Can Akgün',
+    isOnline: false,
+    initials: "CA"
+  },
+  {
+    id: '6',
+    name: 'Luca Quadrelli',
+    isOnline: false,
+    initials: "LQ"
+  },
+  {
+    id: '7',
+    name: 'Mahmoud Ali Khan',
+    isOnline: true,
+    initials: "MA"
+  },
+  {
+    id: '2',
+    name: 'Karim El Kourouchi',
+    isOnline: true,
+    initials: "KE"
+  },
 ]
 
 export default function Profile() {
