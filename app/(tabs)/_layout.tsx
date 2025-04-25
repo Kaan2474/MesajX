@@ -36,9 +36,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="friends"
+        name="friendslist"
         options={{
           title: 'Freunde',
+          headerTintColor: "#1F2227",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'people-sharp' : 'people-outline'} color={color} size={24}/>
           ),
