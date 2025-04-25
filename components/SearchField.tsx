@@ -18,7 +18,7 @@ export default function SearchField({ label }: Props) {
               </View>
               <View style={styles.labelContainer}>
                 <TextInput
-                style={styles.searchChatText}
+                style={styles.labelText}
                 autoCorrect={false}
                 inputMode='text'
                 placeholder={label}
@@ -38,7 +38,7 @@ export default function SearchField({ label }: Props) {
           </View>
           <View style={styles.labelContainer}>
             <TextInput
-              style={styles.searchChatText}
+              style={styles.labelText}
               autoCorrect={false}
               inputMode='text'
               placeholder={label}
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
       left: 15,
       width: "85%",
     },
-    searchChatText: {
+    labelText: {
         color: '#E5E9F0',
         fontSize: 14,
       },
