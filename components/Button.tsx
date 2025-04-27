@@ -76,7 +76,7 @@ export default function Button({ label }: Props) {
 const styles = StyleSheet.create({
   buttonContainer: {
     width: 360,
-    height: 46,
+    height: 40,
   },
   button: {
     borderRadius: 10,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   buttonLabel: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: "700",
     left: 15
   },
