@@ -13,7 +13,9 @@ export default function Button({ label }: Props) {
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
-          <MaterialIcons name="login" size={24} color="#fff" style={[styles.buttonIcon, {left: 105}]}/>
+          <View style={styles.iconContainer}>
+            <MaterialIcons name="login" size={24} color="#fff"/>
+          </View>
         </Pressable>
       </View>
     );
@@ -24,7 +26,9 @@ export default function Button({ label }: Props) {
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
-          <MaterialIcons name="login" size={24} color="#fff" style={[styles.buttonIcon, {left: 95}]}/>
+          <View style={styles.iconContainer}>
+            <MaterialIcons name="login" size={24} color="#fff"/>
+          </View>
         </Pressable>
       </View>
     );
@@ -35,7 +39,9 @@ export default function Button({ label }: Props) {
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
-          <MaterialIcons name="navigate-next" size={24} style={[styles.buttonIcon, {left: 126}]}/>
+          <View style={styles.iconContainer}>
+            <MaterialIcons name="navigate-next" color={"#fff"} size={24}/>
+          </View>
         </Pressable>
       </View>
     );
@@ -46,7 +52,9 @@ export default function Button({ label }: Props) {
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
-          <MaterialIcons name="lock-reset" size={24} style={[styles.buttonIcon, {left: 45}]}/>
+          <View style={styles.iconContainer}>
+            <MaterialIcons name="lock-reset" color={"#fff"} size={24}/>
+          </View>
         </Pressable>
       </View>
     );
@@ -57,7 +65,9 @@ export default function Button({ label }: Props) {
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
-          <Feather name="save" size={24} style={[styles.buttonIcon, {left: 97}]}/>
+          <View style={styles.iconContainer}>
+            <Feather name="save" color={"#fff"} size={24}/>
+          </View>
         </Pressable>
       </View>
     );
@@ -67,7 +77,9 @@ export default function Button({ label }: Props) {
     <View style={styles.buttonContainer}>
       <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
         <Text style={styles.buttonLabel}>{label}</Text>
-        <AntDesign name="adduser" size={24} style={[styles.buttonIcon, {left: 67.5}]} />
+        <View style={styles.iconContainer}>
+          <AntDesign name="adduser" color={"#fff"} size={24} />
+        </View>
       </Pressable>
     </View>
   );
@@ -90,9 +102,9 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: "700",
-    left: 15
   },
-  buttonIcon: {
-    color: "#fff",
+  iconContainer: {
+    position: "absolute",
+    right: 15
   },
 });
