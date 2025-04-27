@@ -39,6 +39,7 @@ export default function SearchField({ label }: Props) {
           <View style={styles.labelContainer}>
             <TextInput
               style={styles.labelText}
+              autoCapitalize='none'
               autoCorrect={false}
               inputMode='text'
               placeholder={label}
