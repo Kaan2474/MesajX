@@ -15,7 +15,6 @@ export default function Logo({ imgSource }: Props) {
 
 const styles = StyleSheet.create({
   imageContainer: {
-    alignItems: "center",
     right: 12.5
   },
   image: {
