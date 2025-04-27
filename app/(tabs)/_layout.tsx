@@ -49,6 +49,7 @@ export default function TabLayout() {
         name="addfriend"
         options={{
           title: 'Freund hinzufügen',
+          headerTintColor: "#1F2227",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'person-add-sharp' : 'person-add-outline'} color={color} size={24}/>
           ),
