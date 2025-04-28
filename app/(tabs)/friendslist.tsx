@@ -4,8 +4,6 @@ import Logo from '@/components/Logo';
 import SearchField from '@/components/SearchField';
 import FriendContainer from '@/components/FriendContainer';
 
-const PlaceholderImage = require('@/assets/images/Logo.png');
-
 const DATA = [
   {
     id: '1',
@@ -50,19 +48,19 @@ const DATA = [
     initials: "MA"
   },
   {
-    id: '2',
+    id: '8',
     name: 'Karim El Kourouchi',
     isOnline: true,
     initials: "KE"
   },
 ]
 
-export default function Profile() {
+export default function Friendslist() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
 
-        <Logo imgSource={PlaceholderImage}/>
+        <Logo />
 
         <View style={styles.searchBarContainer}>
           <SearchField label="Suche Freunde..." />

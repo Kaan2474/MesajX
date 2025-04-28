@@ -7,8 +7,6 @@ import ButtonWithIcon from '@/components/ButtonWithIcon';
 import Logo from '@/components/Logo';
 import ChatContainer from '@/components/ChatContainer';
 
-const PlaceholderImage = require('@/assets/images/Logo.png');
-
 const DATA = [
   {
     id: '1',
@@ -107,7 +105,7 @@ export default function Index() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
 
-        <Logo imgSource={PlaceholderImage}/>
+        <Logo />
 
         <View style={styles.searchBarAndButtonWithIconContainer}>
           <SearchField label="Suche Chat..." />

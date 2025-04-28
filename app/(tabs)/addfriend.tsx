@@ -5,14 +5,12 @@ import Logo from '@/components/Logo';
 import SearchField from '@/components/SearchField';
 import Button from '@/components/Button';
 
-const PlaceholderImage = require('@/assets/images/Logo.png');
-
 export default function AddFriend() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
 
-        <Logo imgSource={PlaceholderImage}/>
+        <Logo />
 
         <View style={styles.descriptionContainer}>
           <Text style={styles.descriptionHeading}>Finde neue Freunde!</Text>
@@ -28,7 +26,7 @@ export default function AddFriend() {
         
         <Text style={styles.friendRequestTextContainer}>
           <Text style={styles.friendRequestsText}>Tippe </Text>
-          <Link href="../friendRequests)" style={[styles.friendRequestsText, {fontWeight: 700}]}>hier </Link>
+          <Link href="/friendRequests" style={[styles.friendRequestsText, {fontWeight: 700}]}>hier </Link>
           <Text style={styles.friendRequestsText}>um deine Freundschaftsanfragen zu sehen</Text>
         </Text>
 
