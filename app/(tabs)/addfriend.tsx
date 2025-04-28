@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { Link } from 'expo-router';
 import Logo from '@/components/Logo';
 import SearchField from '@/components/SearchField';
 import Button from '@/components/Button';
@@ -27,7 +28,7 @@ export default function AddFriend() {
         
         <Text style={styles.friendRequestTextContainer}>
           <Text style={styles.friendRequestsText}>Tippe </Text>
-          <Text style={[styles.friendRequestsText, {fontWeight: 700}]}>hier </Text>
+          <Link href="../friendRequests)" style={[styles.friendRequestsText, {fontWeight: 700}]}>hier </Link>
           <Text style={styles.friendRequestsText}>um deine Freundschaftsanfragen zu sehen</Text>
         </Text>
 
