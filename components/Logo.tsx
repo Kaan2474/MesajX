@@ -1,23 +1,21 @@
 import { StyleSheet, View } from 'react-native';
 import { Image, type ImageSource } from 'expo-image';
 
-type Props = {
-  imgSource: ImageSource;
-};
+const LOGO = require('@/assets/images/Logo.png');
 
-export default function Logo({ imgSource }: Props) {
+export default function Logo() {
   return (
-    <View style={styles.imageContainer}>
-      <Image source={imgSource} style={styles.image} />
+    <View style={styles.logoContainer}>
+      <Image source={LOGO} style={styles.logo} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  imageContainer: {
+  logoContainer: {
     right: 12.5
   },
-  image: {
+  logo: {
     width: 210,
     height: 65,
   },
