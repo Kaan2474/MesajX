@@ -3,19 +3,19 @@ import ProfilePicture from '@/components/ProfilePicture';
 
 type Props = {
     initials: string,
-    isOnline: boolean,
+    status: string,
     time: string,
     name: string,
     message: string,
     unreadMessages: string,
 };
 
-export default function ChatContainer({ initials, isOnline, time, name, message, unreadMessages} : Props) {
+export default function ChatContainer({ initials, status, time, name, message, unreadMessages} : Props) {
 
   return (
     <View style={styles.item}>
 
-        <ProfilePicture initials={initials} isOnline={isOnline}/>
+        <ProfilePicture status={status} size={"small"} initials={initials}/>
 
         <View style={styles.nameAndMessageContainer}>
             <Text style={styles.name}>{name}</Text>

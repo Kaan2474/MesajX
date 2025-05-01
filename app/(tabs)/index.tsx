@@ -3,7 +3,6 @@ import { View, StyleSheet, FlatList } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import SearchField from '@/components/SearchField';
 import ButtonWithIcon from '@/components/ButtonWithIcon';
-
 import Logo from '@/components/Logo';
 import ChatContainer from '@/components/ChatContainer';
 
@@ -14,7 +13,7 @@ const DATA = [
     message: "Hallo, wie geht es dir?",
     time: "22:17",
     unreadMessages: "2",
-    isOnline: true,
+    status: "online",
     initials: "KH"
   },
   {
@@ -23,7 +22,7 @@ const DATA = [
     message: "Kommst du morgen?",
     time: "19:47",
     unreadMessages: "3",
-    isOnline: false,
+    status: "offline",
     initials: "AC"
   },
   {
@@ -32,7 +31,7 @@ const DATA = [
     message: "Ey ich muss dir was erzählen",
     time: "gestern",
     unreadMessages: "2",
-    isOnline: true,
+    status: "online",
     initials: "OC"
   },
   {
@@ -41,7 +40,7 @@ const DATA = [
     message: "Ich habe große Neuigkeiten",
     time: "Montag",
     unreadMessages: "4",
-    isOnline: true,
+    status: "online",
     initials: "MA"
   },
   {
@@ -50,7 +49,7 @@ const DATA = [
     message: "Kommst du mit nach Marokko?",
     time: "Sonntag",
     unreadMessages: "10",
-    isOnline: true,
+    status: "online",
     initials: "KE"
   },
   {
@@ -59,7 +58,7 @@ const DATA = [
     message: "Training morgen?",
     time: "Samstag",
     unreadMessages: "7",
-    isOnline: false,
+    status: "offline",
     initials: "OG"
   },
   {
@@ -68,7 +67,7 @@ const DATA = [
     message: "Bist du noch krank?",
     time: "Freitag",
     unreadMessages: "1",
-    isOnline: true,
+    status: "online",
     initials: "MA"
   },
   {
@@ -77,7 +76,7 @@ const DATA = [
     message: "Habe deine Bewerbung abgeg...",
     time: "Donnerstag",
     unreadMessages: "5",
-    isOnline: false,
+    status: "offline",
     initials: "LD"
   },
   {
@@ -86,7 +85,7 @@ const DATA = [
     message: "Kannst du meine Aufgabe mac...",
     time: "Mittwoch",
     unreadMessages: "2",
-    isOnline: false,
+    status: "offline",
     initials: "DA"
   },
   {
@@ -95,7 +94,7 @@ const DATA = [
     message: "Ich heirate am 20.05",
     time: "Dienstag",
     unreadMessages: "1",
-    isOnline: true,
+    status: "online",
     initials: "ST"
   },
 ];
@@ -114,7 +113,7 @@ export default function Index() {
 
         <FlatList
           data={DATA}
-          renderItem={({item}) => <ChatContainer name={item.name} time={item.time} message={item.message} unreadMessages={item.unreadMessages} isOnline={item.isOnline} initials={item.initials}/>}
+          renderItem={({item}) => <ChatContainer name={item.name} time={item.time} message={item.message} unreadMessages={item.unreadMessages} status={item.status} initials={item.initials}/>}
           keyExtractor={item => item.id}
         />
 
