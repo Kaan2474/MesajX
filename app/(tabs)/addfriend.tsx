@@ -3,7 +3,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Link } from 'expo-router';
 import Logo from '@/components/Logo';
 import SearchField from '@/components/SearchField';
-import Button from '@/components/Button';
+import BigButton from '@/components/Button';
 
 export default function AddFriend() {
   return (
@@ -21,7 +21,7 @@ export default function AddFriend() {
           <SearchField label="Nutzername"/>
         </View>
 
-        <Button label="Freund hinzufügen"/>
+        <BigButton label="Freund hinzufügen"/>
 
         
         <Text style={styles.friendRequestTextContainer}>
