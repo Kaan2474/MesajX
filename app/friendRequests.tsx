@@ -1,9 +1,8 @@
-import { Text, View, StyleSheet, Pressable, FlatList } from 'react-native';
+import { View, StyleSheet, Pressable, FlatList } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
-import ProfilePicture from '@/components/ProfilePicture';
 import FriendRequestContainer from '@/components/friendRequestContainer';
 
 const DATA = [
