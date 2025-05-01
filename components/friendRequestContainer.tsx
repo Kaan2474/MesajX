@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         borderBottomColor: "#4A5160",
       },
       accept: {
-        color: "#26D07C",
+        color: "#30C5FF",
       },
       rejectContainer: {
         justifyContent: "center",
