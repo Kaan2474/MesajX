@@ -13,7 +13,8 @@ export default function Logo() {
 
 const styles = StyleSheet.create({
   logoContainer: {
-    right: 12.5
+    right: 12.5,
+    marginTop: 45,
   },
   logo: {
     width: 210,
