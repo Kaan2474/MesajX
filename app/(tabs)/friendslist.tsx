@@ -8,49 +8,49 @@ const DATA = [
   {
     id: '1',
     name: 'Kaan Hisiroglu',
-    isOnline: true,
+    status: "online",
     initials: "KH"
   },
   {
     id: '2',
     name: 'Alkan Cinar',
-    isOnline: false,
+    status: "offline",
     initials: "AC"
   },
   {
     id: '3',
     name: 'Lars Daumann',
-    isOnline: false,
+    status: "offline",
     initials: "LD"
   },
   {
     id: '4',
     name: 'Dikran Artin',
-    isOnline: true,
+    status: "online",
     initials: "DA"
   },
   {
     id: '5',
     name: 'Can Akgün',
-    isOnline: false,
+    status: "offline",
     initials: "CA"
   },
   {
     id: '6',
     name: 'Luca Quadrelli',
-    isOnline: false,
+    status: "offline",
     initials: "LQ"
   },
   {
     id: '7',
     name: 'Mahmoud Ali Khan',
-    isOnline: true,
+    status: "online",
     initials: "MA"
   },
   {
     id: '8',
     name: 'Karim El Kourouchi',
-    isOnline: true,
+    status: "online",
     initials: "KE"
   },
 ]
@@ -68,7 +68,7 @@ export default function Friendslist() {
 
         <FlatList
           data={DATA}
-          renderItem={({item}) => <FriendContainer name={item.name} isOnline={item.isOnline} initials={item.initials}/>}
+          renderItem={({item}) => <FriendContainer name={item.name} status={item.status} initials={item.initials}/>}
           keyExtractor={item => item.id}
         />
 

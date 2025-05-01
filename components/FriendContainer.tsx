@@ -3,16 +3,16 @@ import ProfilePicture from '@/components/ProfilePicture';
 
 type Props = {
     initials: string,
-    isOnline: boolean,
+    status: string,
     name: string,
 };
 
-export default function FriendContainer({ initials, isOnline, name } : Props) {
+export default function FriendContainer({ initials, status, name } : Props) {
 
   return (
     <View style={styles.item}>
 
-        <ProfilePicture initials={initials} isOnline={isOnline}/>
+        <ProfilePicture status={status} size={"small"} initials={initials}/>
         <View style={styles.nameContainer}>
             <Text style={styles.name}>{name}</Text>
         </View>
