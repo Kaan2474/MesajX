@@ -7,7 +7,7 @@ type Props = {
   label: string;
 };
 
-export default function Button({ label }: Props) {
+export default function BigButton({ label }: Props) {
   if (label === 'Anmelden') {
     return (
       <View style={styles.buttonContainer}>
