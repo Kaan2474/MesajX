@@ -3,7 +3,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Link } from 'expo-router';
 import Logo from '@/components/Logo';
 import SearchField from '@/components/SearchField';
-import BigButton from '@/components/Button';
+import BigButton from '@/components/BigButton';
 
 export default function AddFriend() {
   return (
