@@ -3,7 +3,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
-import FriendRequestContainer from '@/components/friendRequestContainer';
+import FriendRequestContainer from '@/components/FriendRequestContainer';
 
 const DATA = [
   {
