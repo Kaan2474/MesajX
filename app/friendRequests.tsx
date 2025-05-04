@@ -67,7 +67,7 @@ const ROUTER = useRouter();
         <SafeAreaView style={styles.container}>
             <View style={styles.logoAndBackbuttonContainer}>
                 <View style={styles.buttonContainer}>
-                    <Pressable onPress={() => ROUTER.navigate("/(tabs)/addfriend")}>
+                    <Pressable onPress={() => ROUTER.back()}>
                         <Ionicons name="chevron-back" size={30} color="#30C5FF" />
                     </Pressable>
                 </View>
