@@ -3,6 +3,10 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import Feather from '@expo/vector-icons/Feather';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import Octicons from '@expo/vector-icons/Octicons';
+
+
 
 type Props = {
   label: string;
@@ -60,6 +64,19 @@ export default function SmallButton({ label }: Props) {
       </View>
     );
   }
+
+  if (label === 'Anfragen') {
+    return (
+      <View style={styles.buttonContainer}>
+        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+          <Text style={styles.buttonLabel}>{label}</Text>
+          <View style={styles.iconContainer}>
+            <Octicons name="people" size={16} color="#fff" />
+          </View>
+        </Pressable>
+      </View>
+    );
+  }  
   return (
     <></>
   );
