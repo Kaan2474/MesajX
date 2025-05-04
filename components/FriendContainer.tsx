@@ -1,5 +1,6 @@
 import { StyleSheet, View, Text, Pressable } from 'react-native';
 import ProfilePicture from '@/components/ProfilePicture';
+import { useRouter } from 'expo-router';
 
 type Props = {
     initials: string,
@@ -7,10 +8,12 @@ type Props = {
     name: string,
 };
 
+const ROUTER = useRouter();
+
 export default function FriendContainer({ initials, status, name } : Props) {
 
   return (
-    <Pressable style={styles.item} onPress={() => alert("You pressed a button")}>
+    <Pressable style={styles.item} onPress={() => ROUTER.navigate("/friendProfile")}>
       <ProfilePicture status={status} size={"small"} initials={initials}/>
       <View style={styles.nameContainer}>
         <Text style={styles.name}>{name}</Text>
