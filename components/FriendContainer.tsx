@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Pressable } from 'react-native';
 import ProfilePicture from '@/components/ProfilePicture';
 
 type Props = {
@@ -10,25 +10,23 @@ type Props = {
 export default function FriendContainer({ initials, status, name } : Props) {
 
   return (
-    <View style={styles.item}>
-
-        <ProfilePicture status={status} size={"small"} initials={initials}/>
-        <View style={styles.nameContainer}>
-            <Text style={styles.name}>{name}</Text>
-        </View>
-
-    </View>
+    <Pressable style={styles.item} onPress={() => alert("You pressed a button")}>
+      <ProfilePicture status={status} size={"small"} initials={initials}/>
+      <View style={styles.nameContainer}>
+        <Text style={styles.name}>{name}</Text>
+      </View>
+    </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
   item: {
-    flexDirection: "row",
     width: 360,
     height: 80,
+    marginTop: 10,
     borderBottomWidth: 1,
     borderBottomColor: "#4A5160",
-    marginTop: 10,
+    flexDirection: "row",
     alignItems: "center",
   },
   nameContainer: {
