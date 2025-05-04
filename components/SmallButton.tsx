@@ -3,10 +3,10 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import Feather from '@expo/vector-icons/Feather';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Octicons from '@expo/vector-icons/Octicons';
+import { useRouter } from 'expo-router';
 
-
+const ROUTER = useRouter();
 
 type Props = {
   label: string;
@@ -68,7 +68,7 @@ export default function SmallButton({ label }: Props) {
   if (label === 'Anfragen') {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+        <Pressable style={styles.button} onPress={() => ROUTER.navigate("/friendRequests")}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
             <Octicons name="people" size={16} color="#fff" />
