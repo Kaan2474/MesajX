@@ -60,7 +60,7 @@ export default function Friendslist() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
 
-        <Logo />
+        <Logo withBackButton={false}/>
 
         <View style={styles.searchBarContainer}>
           <SearchField label="Suche Freunde..." />

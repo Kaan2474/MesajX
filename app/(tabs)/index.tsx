@@ -104,7 +104,7 @@ export default function Index() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
 
-        <Logo />
+        <Logo withBackButton={false}/>
 
         <View style={styles.searchBarAndButtonWithIconContainer}>
           <SearchField label="Suche Chat..." />

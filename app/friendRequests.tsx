@@ -65,15 +65,8 @@ const ROUTER = useRouter();
   return (
     <SafeAreaProvider>
         <SafeAreaView style={styles.container}>
-            <View style={styles.logoAndBackbuttonContainer}>
-                <View style={styles.buttonContainer}>
-                    <Pressable onPress={() => ROUTER.back()}>
-                        <Ionicons name="chevron-back" size={30} color="#30C5FF" />
-                    </Pressable>
-                </View>
 
-                <Logo />
-            </View>
+          <Logo withBackButton={true} />
 
             <FlatList
             data={DATA}

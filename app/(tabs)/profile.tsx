@@ -8,7 +8,7 @@ export default function Profile() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <Logo />
+        <Logo withBackButton={false}/>
         <View style={styles.profilepictureNamesDescriptionContainer}>
           <ProfilePicture size="big" initials={"KH"} />
           <View style={styles.namesContainer}>

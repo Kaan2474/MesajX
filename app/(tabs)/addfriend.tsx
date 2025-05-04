@@ -11,7 +11,7 @@ export default function AddFriend() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
 
-        <Logo />
+        <Logo withBackButton={false}/>
 
         <View style={styles.descriptionContainer}>
           <Text style={styles.descriptionHeading}>Finde neue Freunde!</Text>
