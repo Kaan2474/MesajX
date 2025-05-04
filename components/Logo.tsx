@@ -11,10 +11,10 @@ export default function Logo({withBackButton}: Props) {
 
   const ROUTER = useRouter();
   const LOGO = require('@/assets/images/Logo.png');
-  
+
   if (withBackButton) {
     return (
-      <View style={styles.logoAndBackbuttonContainer}>
+      <View style={styles.logoAndBackButtonContainer}>
         <View style={styles.buttonContainer}>
           <Pressable onPress={() => ROUTER.back()}>
             <Ionicons name="chevron-back" size={30} color="#30C5FF" />
@@ -26,8 +26,8 @@ export default function Logo({withBackButton}: Props) {
         </View>
       </View>
     );
-
   }
+  
   return (
     <View style={styles.logoContainer}>
       <Image source={LOGO} style={styles.logo} />
@@ -36,7 +36,7 @@ export default function Logo({withBackButton}: Props) {
 }
 
 const styles = StyleSheet.create({
-  logoAndBackbuttonContainer: {
+  logoAndBackButtonContainer: {
     flexDirection: "row",
     width: 360,
     justifyContent: "center",
