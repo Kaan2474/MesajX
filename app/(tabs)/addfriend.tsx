@@ -4,6 +4,7 @@ import { Link } from 'expo-router';
 import Logo from '@/components/Logo';
 import SearchField from '@/components/SearchField';
 import BigButton from '@/components/BigButton';
+import SmallButton from '@/components/SmallButton';
 
 export default function AddFriend() {
   return (
@@ -17,18 +18,17 @@ export default function AddFriend() {
           <Text style={styles.descriptionText}>Suche nach anderen Nutzern und sende Freundschaftsanfragen, um gemeinsam zu chatten</Text>
         </View>
 
-        <View style={styles.searchBarContainer}>
-          <SearchField label="Nutzername"/>
+        <View style={styles.searchUserAddFriendContainer}>
+          <View style={styles.searchUserContainer}>
+            <SearchField label="Nutzername"/>
+          </View>
+
+          <BigButton label="Freund hinzufügen"/>
         </View>
 
-        <BigButton label="Freund hinzufügen"/>
-
-        
-        <Text style={styles.friendRequestTextContainer}>
-          <Text style={styles.friendRequestsText}>Tippe </Text>
-          <Link href="/friendRequests" style={[styles.friendRequestsText, {fontWeight: 700}]}>hier </Link>
-          <Text style={styles.friendRequestsText}>um deine Freundschaftsanfragen zu sehen</Text>
-        </Text>
+        <View style={styles.friendRequestButtonContainer}>
+          <SmallButton label='Anfragen' />
+        </View>
 
       </SafeAreaView>
     </SafeAreaProvider>
@@ -58,18 +58,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#E5E9F0"
   },
-  searchBarContainer: {
-    marginTop: 40,
+  searchUserAddFriendContainer: {
+    marginTop: 85
+  },
+  searchUserContainer: {
     marginBottom: 15
   },
-  friendRequestTextContainer: {
-    width: 250,
-    position: "absolute",
-    bottom: 50,
-  },
-  friendRequestsText: {
-    color: "#E5E9F0",
-    textAlign: "center", 
-    fontSize: 16
+  friendRequestButtonContainer: {
+    marginTop: 190
   },
 });
