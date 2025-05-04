@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
   },
   logoAndBackbuttonContainer: {
     flexDirection: "row",
-    marginTop: 45,
     width: 360,
     justifyContent: "center"
   },
