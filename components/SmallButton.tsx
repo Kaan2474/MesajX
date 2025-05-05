@@ -29,7 +29,7 @@ export default function SmallButton({ label }: Props) {
   if (label === 'Einstellungen') {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+        <Pressable style={styles.button} onPress={() => ROUTER.navigate("/settings")}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
             <Feather name="settings" size={14} color="#fff" />
