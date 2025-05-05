@@ -1,22 +1,24 @@
 import React from 'react';
-import { StyleSheet, View, Pressable, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { TextInput } from "react-native-gesture-handler";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import Entypo from '@expo/vector-icons/Entypo';
 
 type Props = {
+  type: string;
   label: string;
 };
 
-export default function InputField({ label }: Props) {
+export default function InputField({ type, label }: Props) {
 
-    if (label === "Nutzername") {
+    if (type === "Nutzername") {
         return (
             <GestureHandlerRootView style={styles.inputContainer}>
-                <FontAwesome name="user-circle" size={24} style={styles.icon} />
+                <View style={styles.iconContainer}>
+                    <FontAwesome name="user-circle-o" size={18} color="#30C5FF" />
+                </View>
                 <TextInput
                 style={styles.input}
                 autoCapitalize='none'
@@ -32,10 +34,12 @@ export default function InputField({ label }: Props) {
       );
     }
 
-    if (label === "Passwort" || label === "Passwort bestätigen") {
+    else if (type === "Passwort" || type === "Passwort bestätigen") {
         return (
             <GestureHandlerRootView style={styles.inputContainer}>
-                <FontAwesome6 name="lock" size={20} style={[styles.icon, {left: 13}, {marginRight: 26.5}]} />
+                <View style={styles.iconContainer}>
+                    <FontAwesome6 name="lock" size={18} color={"#30C5FF"} />
+                </View>
                 <TextInput
                 style={styles.input}
                 inputMode='text'
@@ -49,10 +53,12 @@ export default function InputField({ label }: Props) {
       );
     }
 
-    if (label === "Vorname" || label === "Nachname") {
+    else if (type === "Vorname" || type === "Nachname") {
         return (
             <GestureHandlerRootView style={styles.inputContainer}>
-                <Entypo name="user" size={24} style={styles.icon} />
+                <View style={styles.iconContainer}>
+                    <FontAwesome name="user" size={18} color={"#30C5FF"} />
+                </View>
                 <TextInput
                 style={styles.input}
                 autoCorrect={false}
@@ -67,10 +73,12 @@ export default function InputField({ label }: Props) {
       );
     }
 
-    if (label === "Email") {
+    else if (type === "Email") {
         return (
             <GestureHandlerRootView style={styles.inputContainer}>
-                <MaterialIcons name="email" size={24} style={styles.icon} />
+                <View style={styles.iconContainer}>
+                    <MaterialIcons name="email" size={18} color={"#30C5FF"} />
+                </View>
                 <TextInput
                 style={styles.input}
                 autoCapitalize='none'
@@ -85,12 +93,14 @@ export default function InputField({ label }: Props) {
       );
     }
 
-    if (label === "Beschreibung") {
+    else if (type === "Beschreibung") {
         return (
-            <GestureHandlerRootView style={[styles.inputContainer, {height: 85}]}>
-                <MaterialIcons name="description" size={24} style={styles.icon} />
+            <GestureHandlerRootView style={[styles.inputContainer, {height: 55}]}>
+                <View style={styles.iconContainer}>
+                    <MaterialIcons name="description" size={18} color={"#30C5FF"} />
+                </View>
                 <TextInput
-                style={[styles.input, {height: 75, top: 10}]}
+                style={styles.input}
                 autoCorrect={false}
                 inputMode='text'
                 maxLength={85}
@@ -104,38 +114,33 @@ export default function InputField({ label }: Props) {
       );
     }
 
-    return (
-        <GestureHandlerRootView style={styles.inputContainer}>
-            <FontAwesome6 name="circle-user" size={24} style={styles.icon} />
-            <TextInput
-            style={styles.input}
-
-            placeholder={label}
-            placeholderTextColor={"#E5E9F0"}
-            keyboardType="numeric">
-            </TextInput>
-        </GestureHandlerRootView>
-  );
+    else {
+        return (
+            <></>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
     inputContainer: {
-        height: 46,
+        height: 40,
         width: 360,
         flexDirection: 'row',
         borderRadius: 10,
         backgroundColor: '#4A5160',
+        alignItems: "center"
     },
-    icon: {
-        top: 12,
-        left: 10,
-        marginRight: 20,
-        color: "#30C5FF",
+    iconContainer: {
+        left: 7.5,
+        height: 20,
+        width: 20,
+        alignItems: "center",
+        justifyContent: "center"
     },
     input: {
         color: '#E5E9F0',
-        fontSize: 16,
+        fontSize: 14,
         width: '87.5%',
-        
+        left: 15,
       },
 });
