@@ -2,14 +2,14 @@ import { Text, View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import ProfilePicture from '@/components/ProfilePicture';
-import SmallButton from '@/components/SmallButton';
+import MediumButton from '@/components/MediumButton';
 
 export default function FriendProfile() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
 
-        <Logo />
+        <Logo withBackButton={true}/>
 
         <View style={styles.profilepictureNamesDescriptionContainer}>
           <ProfilePicture size="big" initials={"AC"} />
@@ -24,8 +24,8 @@ export default function FriendProfile() {
         </View>
 
         <View style={styles.buttonContainer}>
-          <SmallButton label={"Chatten"}/>
-          <SmallButton label={"Entfernen"}/>
+          <MediumButton label={"Chatten"}/>
+          <MediumButton label={"Entfernen"}/>
         </View>
 
         <View style={styles.friendsAndMembershipContainer}>
