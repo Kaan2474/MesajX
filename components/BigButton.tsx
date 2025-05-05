@@ -14,75 +14,84 @@ export default function BigButton({ label }: Props) {
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
-            <MaterialIcons name="login" size={24} color="#fff"/>
+            <MaterialIcons name="login" size={18} color="#fff"/>
           </View>
         </Pressable>
       </View>
     );
   }
 
-  if (label === "Registrieren") {
+  else if (label === "Registrieren") {
     return (
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
-            <MaterialIcons name="login" size={24} color="#fff"/>
+            <MaterialIcons name="login" size={18} color="#fff"/>
           </View>
         </Pressable>
       </View>
     );
   }
 
-  if (label === 'Weiter') {
+  else if (label === 'Weiter') {
     return (
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
-            <MaterialIcons name="navigate-next" color={"#fff"} size={24}/>
+            <MaterialIcons name="navigate-next" color={"#fff"} size={18}/>
           </View>
         </Pressable>
       </View>
     );
   }
 
-  if (label === 'Passwort zurücksetzen') {
+  else if (label === 'Passwort zurücksetzen') {
     return (
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
-            <MaterialIcons name="lock-reset" color={"#fff"} size={24}/>
+            <MaterialIcons name="lock-reset" color={"#fff"} size={18}/>
           </View>
         </Pressable>
       </View>
     );
   }
 
-  if (label === 'Speichern') {
+  else if (label === 'Speichern') {
     return (
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
-            <Feather name="save" color={"#fff"} size={24}/>
+            <Feather name="save" color={"#fff"} size={18}/>
           </View>
         </Pressable>
       </View>
     );
   }
 
-  return (
-    <View style={styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
-        <Text style={styles.buttonLabel}>{label}</Text>
-        <View style={styles.iconContainer}>
-          <AntDesign name="adduser" color={"#fff"} size={24} />
-        </View>
-      </Pressable>
-    </View>
-  );
+  else if (label === "Freund hinzufügen") {
+    return (
+      <View style={styles.buttonContainer}>
+        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+          <Text style={styles.buttonLabel}>{label}</Text>
+          <View style={styles.iconContainer}>
+            <AntDesign name="adduser" color={"#fff"} size={18} />
+          </View>
+        </Pressable>
+      </View>
+    );
+  }
+
+  else {
+    return (
+      <></>
+    );
+  }
+
 }
 
 const styles = StyleSheet.create({
