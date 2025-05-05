@@ -1,10 +1,9 @@
 import { Text, View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import { Link } from 'expo-router';
 import Logo from '@/components/Logo';
 import SearchField from '@/components/SearchField';
 import BigButton from '@/components/BigButton';
-import SmallButton from '@/components/SmallButton';
+import MediumButton from '@/components/MediumButton';
 
 export default function AddFriend() {
   return (
@@ -27,7 +26,7 @@ export default function AddFriend() {
         </View>
 
         <View style={styles.friendRequestButtonContainer}>
-          <SmallButton label='Anfragen' />
+          <MediumButton label='Anfragen' />
         </View>
 
       </SafeAreaView>

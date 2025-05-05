@@ -2,7 +2,7 @@ import { View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import ProfilePicture from '@/components/ProfilePicture';
-import SmallButton from '@/components/SmallButton';
+import MediumButton from '@/components/MediumButton';
 import InputField from '@/components/InputField';
 import BigButton from '@/components/BigButton';
 
@@ -14,7 +14,7 @@ export default function Settings() {
         
         <View style={styles.profilePictureAddPictureButtonContainer}>
             <ProfilePicture size='big' initials='KH' />
-            <SmallButton label='Foto hochladen' />
+            <MediumButton label='Foto hochladen' />
         </View>
 
         <View style={styles.inputFieldsSaveButtonContainer}>

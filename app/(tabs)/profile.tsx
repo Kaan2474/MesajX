@@ -2,7 +2,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import ProfilePicture from '@/components/ProfilePicture';
-import SmallButton from '@/components/SmallButton';
+import MediumButton from '@/components/MediumButton';
 
 export default function Profile() {
   return (
@@ -22,8 +22,8 @@ export default function Profile() {
         </View>
 
         <View style={styles.buttonContainer}>
-          <SmallButton label={"Abmelden"}/>
-          <SmallButton label={"Einstellungen"}/>
+          <MediumButton label={"Abmelden"}/>
+          <MediumButton label={"Einstellungen"}/>
         </View>
 
         <View style={styles.friendsAndMembershipContainer}>
