@@ -1,12 +1,10 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import ProfilePicture from '@/components/ProfilePicture';
 import SmallButton from '@/components/SmallButton';
 import InputField from '@/components/InputField';
 import BigButton from '@/components/BigButton';
-import { Tabs } from 'expo-router';
-import TabLayout from './(tabs)/_layout';
 
 export default function Settings() {
   return (
@@ -19,23 +17,23 @@ export default function Settings() {
             <SmallButton label='Foto hochladen' />
         </View>
 
-        <View style={styles.inputFieldsContainer}>
+        <View style={styles.inputFieldsSaveButtonContainer}>
             <View>
                 <InputField type="Vorname" label="Vorname" />
             </View>
-            <View style={{marginTop: 10}}>
+            <View style={styles.singleInputFieldSaveButtonContainer}>
                 <InputField type="Nachname" label="Hisiroglu" />
             </View>
-            <View style={{marginTop: 10}}>
+            <View style={styles.singleInputFieldSaveButtonContainer}>
                 <InputField type="Nutzername" label="kaan2474" />
             </View>
-            <View style={{marginTop: 10}}>
+            <View style={styles.singleInputFieldSaveButtonContainer}>
                 <InputField type="Passwort" label="**************" />
             </View>
-            <View style={{marginTop: 10}}>
+            <View style={styles.singleInputFieldSaveButtonContainer}>
                 <InputField type="Beschreibung" label="Hallo, mein Name ist Kaan und meine größte Leidenschaft ist das Programmieren!" />
             </View>
-            <View style={{marginTop: 10}}>
+            <View style={styles.singleInputFieldSaveButtonContainer}>
                 <BigButton label="Speichern" />
             </View>
         </View>
@@ -57,7 +55,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     marginTop: 50,
   },
-  inputFieldsContainer: {
+  inputFieldsSaveButtonContainer: {
     marginTop: 75,
+    alignItems: "center"
+  },
+  singleInputFieldSaveButtonContainer: {
+    marginTop: 10
   },
 });
