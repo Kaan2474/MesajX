@@ -16,7 +16,7 @@ export default function SmallButton({ label }: Props) {
   if (label === 'Abmelden') {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+        <Pressable style={[styles.button, {justifyContent: "center"}]} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
             <MaterialIcons name="login" size={14} color="#fff"/>
@@ -29,8 +29,8 @@ export default function SmallButton({ label }: Props) {
   else if (label === 'Einstellungen') {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => ROUTER.navigate("/settings")}>
-          <Text style={styles.buttonLabel}>{label}</Text>
+        <Pressable style={[styles.button, {justifyContent: "center"}]} onPress={() => ROUTER.navigate("/settings")}>
+          <Text style={[styles.buttonLabel, {right: 2}]}>{label}</Text>
           <View style={styles.iconContainer}>
             <Feather name="settings" size={14} color="#fff" />
           </View>
@@ -42,7 +42,7 @@ export default function SmallButton({ label }: Props) {
   else if (label === 'Chatten') {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+        <Pressable style={[styles.button, {justifyContent: "center"}]} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
             <Ionicons name="chatbubble-ellipses-outline" size={14} color="#fff" />
@@ -55,7 +55,7 @@ export default function SmallButton({ label }: Props) {
   else if (label === 'Entfernen') {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+        <Pressable style={[styles.button, {justifyContent: "center"}]} onPress={() => alert('You pressed a button.')}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
             <AntDesign name="delete" size={14} color="#fff" />
@@ -68,15 +68,29 @@ export default function SmallButton({ label }: Props) {
   else if (label === 'Anfragen') {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => ROUTER.navigate("/friendRequests")}>
+        <Pressable style={[styles.button, {justifyContent: "center"}]} onPress={() => ROUTER.navigate("/friendRequests")}>
           <Text style={styles.buttonLabel}>{label}</Text>
           <View style={styles.iconContainer}>
-            <Octicons name="people" size={16} color="#fff" />
+            <Octicons name="people" size={14} color="#fff" />
           </View>
         </Pressable>
       </View>
     );
-  }  
+  }
+
+  else if (label === "Foto hochladen") {
+    return (
+      <View style={styles.buttonContainer}>
+        <Pressable style={styles.button} onPress={() => alert("You pressed a button")}>
+          <Text style={[styles.buttonLabel, {left: 12}]}>{label}</Text>
+          <View style={styles.iconContainer}>
+            <AntDesign name="pluscircleo" size={14} color="#fff" />
+          </View>
+        </Pressable>
+      </View>
+    );
+  }
+
   return (
     <></>
   );
@@ -84,20 +98,19 @@ export default function SmallButton({ label }: Props) {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    width: 150,
+    width: 145,
     height: 40,
   },
   button: {
     borderRadius: 10,
     height: '100%',
     alignItems: 'center',
-    justifyContent: "center",
     flexDirection: 'row',
     backgroundColor: "#30C5FF",
   },
   buttonLabel: {
     color: '#fff',
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: "700",
   },
   iconContainer: {
