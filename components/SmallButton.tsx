@@ -26,7 +26,7 @@ export default function SmallButton({ label }: Props) {
     );
   }
 
-  if (label === 'Einstellungen') {
+  else if (label === 'Einstellungen') {
     return (
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => ROUTER.navigate("/settings")}>
@@ -39,7 +39,7 @@ export default function SmallButton({ label }: Props) {
     );
   }
 
-  if (label === 'Chatten') {
+  else if (label === 'Chatten') {
     return (
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
@@ -52,7 +52,7 @@ export default function SmallButton({ label }: Props) {
     );
   }
 
-  if (label === 'Entfernen') {
+  else if (label === 'Entfernen') {
     return (
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
@@ -65,7 +65,7 @@ export default function SmallButton({ label }: Props) {
     );
   }
 
-  if (label === 'Anfragen') {
+  else if (label === 'Anfragen') {
     return (
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => ROUTER.navigate("/friendRequests")}>
