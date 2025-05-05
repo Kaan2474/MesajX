@@ -12,7 +12,7 @@ type Props = {
   label: string;
 };
 
-export default function SmallButton({ label }: Props) {
+export default function MediumButton({ label }: Props) {
   if (label === 'Abmelden') {
     return (
       <View style={styles.buttonContainer}>
