@@ -1,27 +1,20 @@
-import { StyleSheet, View, Pressable } from 'react-native';
-import { Image, type ImageSource } from 'expo-image';
-import { useRouter } from 'expo-router';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { StyleSheet, View } from 'react-native';
+import { Image } from 'expo-image';
+import ButtonWithIcon from './ButtonWithIcon';
 
 type Props = {
   withBackButton: boolean
 }
 
-export default function Logo({withBackButton}: Props) {
+export default function Logo({ withBackButton }: Props) {
 
-  const ROUTER = useRouter();
   const LOGO = require('@/assets/images/Logo.png');
 
   if (withBackButton) {
     return (
-      <View style={styles.logoAndBackButtonContainer}>
-        <View style={styles.buttonContainer}>
-          <Pressable onPress={() => ROUTER.back()}>
-            <Ionicons name="chevron-back" size={30} color="#30C5FF" />
-          </Pressable>
-        </View>
-  
-        <View style={styles.logoContainer}>
+      <View style={styles.container}>
+        <View style={styles.logoAndBackButtonContainer}>
+          <ButtonWithIcon type='Zurück' />
           <Image source={LOGO} style={styles.logo} />
         </View>
       </View>
@@ -29,29 +22,25 @@ export default function Logo({withBackButton}: Props) {
   }
   
   return (
-    <View style={styles.logoContainer}>
+    <View style={styles.container}>
       <Image source={LOGO} style={styles.logo} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    marginTop: 45
+  },
   logoAndBackButtonContainer: {
     flexDirection: "row",
-    width: 360,
+    width: 388.4,
     justifyContent: "center",
-  },
-  buttonContainer: {
-    position: "absolute",
-    left: 7.5,
-    bottom: 25
-  },
-  logoContainer: {
-    right: 12.5,
-    marginTop: 45,
+    alignItems: "center",
   },
   logo: {
     width: 210,
     height: 65,
+    right: 10
   },
 });
