@@ -1,30 +1,50 @@
-import { StyleSheet, View, Pressable } from 'react-native';
+import { StyleSheet, Pressable } from 'react-native';
 import Entypo from '@expo/vector-icons/Entypo';
 import { useRouter } from 'expo-router';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
-export default function ButtonWithIcon() {
+type Props = {
+  type: string
+}
+
+export default function ButtonWithIcon({ type }: Props) {
 
   const ROUTER = useRouter();
 
-  return (
-    <View style={styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={() => ROUTER.navigate("/newMessage")}>
+  if (type === "Neuer Chat") {
+    return (
+      <Pressable style={styles.newChatButton} onPress={() => ROUTER.navigate("/newMessage")}>
         <Entypo name="new-message" size={24} color="#30C5FF" />
       </Pressable>
-    </View>
-  );
+    );
+  }
+
+  else if (type === "Zurück") {
+    return (
+      <Pressable style={styles.backButton} onPress={() => ROUTER.back()}>
+        <Ionicons name="chevron-back" size={30} color="#30C5FF" />
+      </Pressable>
+    );
+  }
+
+  else {
+    return (
+      <></>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-  buttonContainer: {
+  newChatButton: {
     width: 44,
     height: 40,
-  },
-  button: {
     borderRadius: 10,
-    height: '100%',
     alignItems: 'center',
     justifyContent: "center",
     backgroundColor: "#4A5160",
   },
+  backButton: {
+    position: "absolute",
+    left: 7.5,
+  }
 });
