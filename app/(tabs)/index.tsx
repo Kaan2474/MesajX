@@ -108,7 +108,7 @@ export default function Index() {
 
         <View style={styles.searchBarAndButtonWithIconContainer}>
           <SearchField label="Suche Chat..." />
-          <ButtonWithIcon />
+          <ButtonWithIcon type='Neuer Chat'/>
         </View>
 
         <FlatList
