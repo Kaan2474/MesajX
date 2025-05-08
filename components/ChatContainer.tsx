@@ -1,5 +1,6 @@
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Pressable } from 'react-native';
 import ProfilePicture from '@/components/ProfilePicture';
+import { useRouter } from 'expo-router';
 
 type Props = {
     initials: string,
@@ -10,10 +11,12 @@ type Props = {
     unreadMessages: string,
 };
 
-export default function ChatContainer({ initials, status, time, name, message, unreadMessages} : Props) {
+export default function ChatContainer({ initials, status, time, name, message, unreadMessages } : Props) {
+
+  const ROUTER = useRouter();
 
   return (
-    <View style={styles.item}>
+    <Pressable style={styles.item} onPress={() => ROUTER.navigate("/chat")}>
 
         <ProfilePicture status={status} size={"small"} initials={initials}/>
 
@@ -28,7 +31,7 @@ export default function ChatContainer({ initials, status, time, name, message, u
                 <Text style={styles.unreadMessages}>{unreadMessages}</Text>
             </View>
         </View>
-  </View>
+  </Pressable>
   );
 }
 
