@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, StyleSheet, FlatList } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import SearchField from '@/components/SearchField';
 import ButtonWithIcon from '@/components/ButtonWithIcon';
 import Logo from '@/components/Logo';
 import ChatContainer from '@/components/ChatContainer';
+import InputField from '@/components/InputField';
 
 const DATA = [
   {
@@ -107,7 +107,7 @@ export default function Index() {
         <Logo withBackButton={false}/>
 
         <View style={styles.searchBarAndButtonWithIconContainer}>
-          <SearchField label="Suche Chat..." />
+          <InputField inputFieldHeight={40} inputFieldWidth={303.5} type='Suchen' placeholder="Suche Chat..." />
           <ButtonWithIcon type='Neuer Chat'/>
         </View>
 

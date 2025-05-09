@@ -1,8 +1,8 @@
 import { Text, View, StyleSheet, FlatList } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
-import SearchField from '@/components/SearchField';
 import FriendContainer from '@/components/FriendContainer';
+import InputField from '@/components/InputField';
 
 const DATA = [
   {
@@ -63,8 +63,9 @@ export default function Friendslist() {
         <Logo withBackButton={false}/>
 
         <View style={styles.searchBarContainer}>
-          <SearchField label="Suche Freunde..." />
+          <InputField inputFieldHeight={40} inputFieldWidth={360} type="Suchen" placeholder='Suche Freunde...' ></InputField>
         </View>
+
 
         <FlatList
           data={DATA}

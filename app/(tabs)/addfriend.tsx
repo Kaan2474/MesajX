@@ -1,9 +1,9 @@
 import { Text, View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Logo from '@/components/Logo';
-import SearchField from '@/components/SearchField';
 import BigButton from '@/components/BigButton';
 import MediumButton from '@/components/MediumButton';
+import InputField from '@/components/InputField';
 
 export default function AddFriend() {
   return (
@@ -19,7 +19,7 @@ export default function AddFriend() {
 
         <View style={styles.searchUserAddFriendContainer}>
           <View style={styles.searchUserContainer}>
-            <SearchField label="Nutzername"/>
+            <InputField inputFieldHeight={40} inputFieldWidth={360} type="Suchen" placeholder='Nutzername'/>
           </View>
 
           <BigButton label="Freund hinzufügen"/>
