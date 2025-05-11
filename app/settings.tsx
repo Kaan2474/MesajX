@@ -19,22 +19,22 @@ export default function Settings() {
 
         <View style={styles.inputFieldsSaveButtonContainer}>
             <View>
-                <InputField type="Vorname" label="Vorname" />
+                <InputField type="Vorname" placeholder="Kaan" inputFieldHeight={40} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-                <InputField type="Nachname" label="Hisiroglu" />
+                <InputField type="Nachname" placeholder="Hisiroglu" inputFieldHeight={40} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-                <InputField type="Nutzername" label="kaan2474" />
+                <InputField type="Nutzername" placeholder="kaan2474" inputFieldHeight={40} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-                <InputField type="Passwort" label="**************" />
+                <InputField type="Passwort" placeholder="**************" inputFieldHeight={40} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-                <InputField type="Beschreibung" label="Hallo, mein Name ist Kaan und meine größte Leidenschaft ist das Programmieren!" />
+                <InputField type="Beschreibung" placeholder="Hallo, mein Name ist Kaan und meine größte Leidenschaft ist das Programmieren!" inputFieldHeight={55} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-                <BigButton label="Speichern" />
+                <BigButton type="Speichern" placeholder="Speichern" />
             </View>
         </View>
       </SafeAreaView>
