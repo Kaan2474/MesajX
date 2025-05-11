@@ -1,41 +1,21 @@
 import { StyleSheet, Pressable } from 'react-native';
 import Entypo from '@expo/vector-icons/Entypo';
-import { useRouter } from 'expo-router';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 type Props = {
-  type: string
+  type: string;
+  functionality: void;
 }
 
-export default function ButtonWithIcon({ type }: Props) {
-
-  const ROUTER = useRouter();
-
-  if (type === "Neuer Chat") {
-    return (
-      <Pressable style={styles.newChatButton} onPress={() => ROUTER.navigate("/newMessage")}>
-        <Entypo name="new-message" size={24} color="#30C5FF" />
-      </Pressable>
-    );
-  }
-
-  else if (type === "Zurück") {
-    return (
-      <Pressable style={styles.backButton} onPress={() => ROUTER.back()}>
-        <Ionicons name="chevron-back" size={30} color="#30C5FF" />
-      </Pressable>
-    );
-  }
-
-  else {
-    return (
-      <></>
-    );
-  }
+export default function ButtonWithIcon({ type, functionality }: Props) {
+  <Pressable style={styles.button} onPress={() => functionality}>
+    {!! (type === "Neuer Chat") && <Entypo name="new-message" size={24} color="#30C5FF"/>}
+    {!! (type === "Nachricht senden") && <FontAwesome name="send" size={24} color="#30C5FF"/>}
+  </Pressable>
 }
 
 const styles = StyleSheet.create({
-  newChatButton: {
+  button: {
     width: 44,
     height: 40,
     borderRadius: 10,
@@ -43,8 +23,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#4A5160",
   },
-  backButton: {
-    position: "absolute",
-    left: 7.5,
-  }
 });
