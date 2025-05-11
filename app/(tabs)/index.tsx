@@ -110,7 +110,7 @@ export default function Index() {
 
         <View style={styles.searchBarAndButtonWithIconContainer}>
           <InputField inputFieldHeight={40} inputFieldWidth={303.5} type='Suchen' placeholder="Suche Chat..." />
-          <IconButton type='Neuer Chat' functionality={navigateBack()}/>
+          <IconButton type='Neuer Chat' functionality={navigateToNewMessage()}/>
         </View>
 
         <FlatList
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function navigateBack() {
+function navigateToNewMessage() {
   const ROUTER = useRouter();
-  ROUTER.back()
+  ROUTER.navigate("/newMessage")
 }
