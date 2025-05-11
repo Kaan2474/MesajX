@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 import { Image } from 'expo-image';
-import ButtonWithIcon from './ButtonWithIcon';
+import BackButton from './BackButton';
 
 type Props = {
   withBackButton: boolean
@@ -14,7 +14,7 @@ export default function Logo({ withBackButton }: Props) {
     return (
       <View style={styles.container}>
         <View style={styles.logoAndBackButtonContainer}>
-          <ButtonWithIcon type='Zurück' />
+          <BackButton />
           <Image source={LOGO} style={styles.logo} />
         </View>
       </View>
