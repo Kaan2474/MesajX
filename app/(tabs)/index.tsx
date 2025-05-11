@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, StyleSheet, FlatList } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import ButtonWithIcon from '@/components/ButtonWithIcon';
+import IconButton from '@/components/IconButton';
 import Logo from '@/components/Logo';
 import ChatContainer from '@/components/ChatContainer';
 import InputField from '@/components/InputField';
+import { useRouter } from 'expo-router';
 
 const DATA = [
   {
@@ -100,6 +101,7 @@ const DATA = [
 ];
 
 export default function Index() {
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -108,7 +110,7 @@ export default function Index() {
 
         <View style={styles.searchBarAndButtonWithIconContainer}>
           <InputField inputFieldHeight={40} inputFieldWidth={303.5} type='Suchen' placeholder="Suche Chat..." />
-          <ButtonWithIcon type='Neuer Chat'/>
+          <IconButton type='Neuer Chat' functionality={navigateBack()}/>
         </View>
 
         <FlatList
@@ -135,3 +137,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
 });
+
+function navigateBack() {
+  const ROUTER = useRouter();
+  ROUTER.back()
+}
