@@ -110,7 +110,7 @@ export default function Index() {
 
         <View style={styles.searchBarAndButtonWithIconContainer}>
           <InputField inputFieldHeight={40} inputFieldWidth={303.5} type='Suchen' placeholder="Suche Chat..." />
-          <IconButton type='Neuer Chat' functionality={navigateToNewMessage()}/>
+          <IconButton type='Neuer Chat' functionality={navigateToNewMessage}/>
         </View>
 
         <FlatList
