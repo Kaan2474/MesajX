@@ -7,7 +7,7 @@ type Props = {
   functionality: void;
 }
 
-export default function ButtonWithIcon({ type, functionality }: Props) {
+export default function IconButton({ type, functionality }: Props) {
   <Pressable style={styles.button} onPress={() => functionality}>
     {!! (type === "Neuer Chat") && <Entypo name="new-message" size={24} color="#30C5FF"/>}
     {!! (type === "Nachricht senden") && <FontAwesome name="send" size={24} color="#30C5FF"/>}
