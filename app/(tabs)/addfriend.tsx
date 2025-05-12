@@ -22,7 +22,7 @@ export default function AddFriend() {
             <InputField inputFieldHeight={40} inputFieldWidth={360} type="Suchen" placeholder='Nutzername'/>
           </View>
 
-          <BigButton label="Freund hinzufügen"/>
+          <BigButton type="Freund hinzufügen" placeholder='Freund hinzufügen'/>
         </View>
 
         <View style={styles.friendRequestButtonContainer}>
