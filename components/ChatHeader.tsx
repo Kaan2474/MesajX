@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text } from 'react-native';
 import { useRouter } from 'expo-router';
 import ProfilePicture from './ProfilePicture';
-import ButtonWithIcon from './ButtonWithIcon';
+import BackButton from './BackButton';
 
 export default function ChatHeader() {
 
@@ -10,7 +10,7 @@ export default function ChatHeader() {
   return (
     <View style={styles.container}>
         <View style={styles.headerContainer}>
-            <ButtonWithIcon type='Zurück'/>
+            <BackButton />
 
             <View style={styles.profilePictureNameStatusContainer}>
                 <ProfilePicture status='online' size='medium' initials="AC" />
