@@ -7,11 +7,12 @@ type Props = {
     initials: string,
     status: string,
     name: string,
+    functionality: () => void
 };
 
 const ROUTER = useRouter();
 
-export default function NewMessageContainer({ initials, status, name } : Props) {
+export default function NewMessageContainer({ initials, status, name, functionality } : Props) {
 
   return (
     <View style={styles.item}>
@@ -20,7 +21,7 @@ export default function NewMessageContainer({ initials, status, name } : Props) 
         <Text style={styles.name}>{name}</Text>
       </View>
       <View style={styles.chatButtonContainer}>
-        <SmallButton />
+        <SmallButton functionality={functionality}/>
       </View>
     </View>
   );

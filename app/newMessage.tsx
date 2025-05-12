@@ -3,6 +3,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import NewMessageContainer from '@/components/NewMessageContainer';
 import InputField from '@/components/InputField';
+import { useRouter } from 'expo-router';
 
 const DATA = [
   {
@@ -68,7 +69,7 @@ export default function NewMessage() {
 
         <FlatList
           data={DATA}
-          renderItem={({item}) => <NewMessageContainer name={item.name} status={item.status} initials={item.initials}/>}
+          renderItem={({item}) => <NewMessageContainer name={item.name} status={item.status} initials={item.initials} functionality={navigateToEmptyChat}/>}
           keyExtractor={item => item.id}
         />
 
@@ -87,3 +88,8 @@ const styles = StyleSheet.create({
     marginTop: 25,
   },
 });
+
+function navigateToEmptyChat() {
+  const ROUTER = useRouter();
+  ROUTER.navigate("/emptyChat")
+}

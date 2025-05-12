@@ -1,13 +1,14 @@
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { useRouter } from 'expo-router';
 
-const ROUTER = useRouter();
+type Props = {
+  functionality: () => void;
+};
 
-export default function SmallButton() {
+export default function SmallButton({ functionality } : Props) {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+        <Pressable style={styles.button} onPress={functionality}>
           <Text style={styles.buttonLabel}>Chatten</Text>
           <View style={styles.iconContainer}>
             <Ionicons name="chatbubble-ellipses-outline" size={12} color="#fff" />
