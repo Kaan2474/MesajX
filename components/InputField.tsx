@@ -6,6 +6,7 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 type Props = {
   type: string;
@@ -29,6 +30,7 @@ export default function InputField({ inputFieldHeight, inputFieldWidth, type, pl
           {!! (type === "Email") && <MaterialIcons name="email" size={18} color={"#30C5FF"} />}
           {!! (type === "Suchen") && <AntDesign name="search1" size={18} color={"#30C5FF"} />}
           {!! (type === "Beschreibung") && <MaterialIcons name="description" size={18} color={"#30C5FF"} />}
+          {!! (type === "Chat") && <Ionicons name="chatbubble-ellipses" size={18} color="#30C5FF" />}
         </View>
     
         {!! (type === "Nutzername") && <TextInput style={styles.input} autoCapitalize='none' autoCorrect={false} inputMode='text'
@@ -51,6 +53,9 @@ export default function InputField({ inputFieldHeight, inputFieldWidth, type, pl
         placeholder={placeholder} placeholderTextColor={"#E5E9F0"} returnKeyType='done' selectionColor={"#30C5FF"} />}
 
         {!! (type === "Beschreibung") && <TextInput style={styles.input} autoCorrect={false} inputMode='text' maxLength={85} multiline={true}
+        placeholder={placeholder} placeholderTextColor={"#E5E9F0"} returnKeyType='done' selectionColor={"#30C5FF"} />}
+
+        {!! (type === "Chat") && <TextInput style={styles.input} autoCorrect={false} inputMode='text' 
         placeholder={placeholder} placeholderTextColor={"#E5E9F0"} returnKeyType='done' selectionColor={"#30C5FF"} />}
     
     </GestureHandlerRootView>
