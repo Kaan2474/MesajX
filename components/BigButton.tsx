@@ -4,15 +4,17 @@ import Feather from '@expo/vector-icons/Feather';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 type Props = {
-  type: string,
-  placeholder: string,
-  buttonFunctionality: () => void,
+  type: string;
+  placeholder: string;
+  buttonHeight: number;
+  buttonWidth: number;
+  buttonFunctionality?: () => void;
 };
 
-export default function BigButton({ type, placeholder, buttonFunctionality }: Props) {
+export default function BigButton({ type, placeholder, buttonHeight, buttonWidth, buttonFunctionality }: Props) {
 
   return (
-    <View style={styles.buttonContainer}>
+    <View style={{height: buttonHeight, width: buttonWidth}}>
       <Pressable style={styles.button} onPress={buttonFunctionality}>
         <Text style={styles.buttonLabel}>{placeholder}</Text>
         <View style={styles.iconContainer}>
@@ -31,10 +33,6 @@ export default function BigButton({ type, placeholder, buttonFunctionality }: Pr
 
 
 const styles = StyleSheet.create({
-  buttonContainer: {
-    width: 360,
-    height: 40,
-  },
   button: {
     borderRadius: 10,
     height: '100%',
