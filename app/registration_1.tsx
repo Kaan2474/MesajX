@@ -50,7 +50,7 @@ export default function Registration_1() {
 
         <BigButton type='Weiter' placeholder='Weiter' buttonHeight={inputFieldAndButtonHeight} buttonWidth={inputFieldAndButtonWidth} buttonFunctionality={navigateToNextRegistrationPage}/>
         <Text style={styles.alreadyHaveAnAccText}>Du hast bereits ein Konto? <Link href={"/login"} style={styles.loginText}>Anmelden</Link></Text>
-        <ProgressBar />
+        <ProgressBar firstBarColor='#30C5FF' secondBarColor='#4A5160'/>
 
 
       </SafeAreaView>
