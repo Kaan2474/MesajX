@@ -4,15 +4,16 @@ import Feather from '@expo/vector-icons/Feather';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 type Props = {
-  type: string;
-  placeholder: string;
+  type: string,
+  placeholder: string,
+  buttonFunctionality: () => void,
 };
 
-export default function BigButton({ type, placeholder }: Props) {
+export default function BigButton({ type, placeholder, buttonFunctionality }: Props) {
 
   return (
     <View style={styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+      <Pressable style={styles.button} onPress={buttonFunctionality}>
         <Text style={styles.buttonLabel}>{placeholder}</Text>
         <View style={styles.iconContainer}>
           {!! (type === "Anmelden" || type === "Registrieren") && <MaterialIcons name="login" size={18} color="#fff"/>}
