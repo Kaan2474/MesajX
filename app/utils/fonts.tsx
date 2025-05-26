@@ -12,11 +12,6 @@ const size = {
     fontSize13: scaleFontSize(13)
 }
 
-const weight = {
-    semi: '700'
-}
-
 export default {
     size,
-    weight
 };
