@@ -1,11 +1,10 @@
-import { StyleSheet, View, Dimensions } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import universalStyles from '@/app/utils/universalStyles';
 
 type Props = {
   firstBarColor: string
   secondBarColor: string
 };
-
-const { height, width } = Dimensions.get("window");
 
 export default function ProgressBar({ firstBarColor, secondBarColor }: Props) {
 
@@ -20,14 +19,14 @@ export default function ProgressBar({ firstBarColor, secondBarColor }: Props) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    width: width * (12/13),
+    width: universalStyles.SCREEN_WIDTH * 0.90, //351
     justifyContent: "space-between",
     position: "absolute", 
-    bottom: height * (1/18.75555556),
+    bottom: universalStyles.SCREEN_HEIGHT * 0.05331753555, //45
   },
   bar: {
-    height: height * (1/56.26666667),
-    width: width * (11/26),
-    borderRadius: height * (1/56.26666667)
+    height: universalStyles.SCREEN_HEIGHT * 0.01777251185, //15
+    width: universalStyles.SCREEN_WIDTH * 0.4230769231, //165
+    borderRadius: universalStyles.SCREEN_HEIGHT * 0.01777251185 //15
   },
 });
