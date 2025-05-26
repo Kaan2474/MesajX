@@ -1,8 +1,9 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import colors from "./colors";
 import fonts from "./fonts";
 
-const SPACE_AFTER_CONTENT = 20; //Muss noch für responsiveness geändert werden
+const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
+const SPACE_AFTER_CONTENT: number = 0.024 * SCREEN_HEIGHT;
 
 const styles = StyleSheet.create({
     container: {
@@ -14,13 +15,13 @@ const styles = StyleSheet.create({
         height: "20%",
         width: "100%",
         justifyContent: "space-around",
-        marginTop: 40, //Muss noch für responsiveness geändert werden
-        marginBottom: 65, //Muss noch für responsiveness geändert werden
+        marginTop: SCREEN_HEIGHT * 0.04739336493 ,
+        marginBottom: SCREEN_HEIGHT * 0.07701421801,
       },
       headingText: {
         color: colors.textColor,
         fontSize: fonts.size.fontSize22,
-        fontWeight: "700", //Muss noch für responsiveness geändert werden
+        fontWeight: "700",
         textAlign: "center"
       },
       descriptionText: {
@@ -29,11 +30,13 @@ const styles = StyleSheet.create({
         fontSize: fonts.size.fontSize13
       },
       inputFieldMargin: {
-        marginBottom: 10 //Muss noch für responsiveness geändert werden
+        marginBottom: SCREEN_HEIGHT * 0.01184834123
       }
 })
 
 export default {
     styles,
-    SPACE_AFTER_CONTENT
+    SPACE_AFTER_CONTENT,
+    SCREEN_HEIGHT,
+    SCREEN_WIDTH
 }
