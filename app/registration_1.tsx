@@ -44,21 +44,10 @@ export default function Registration_1() {
         </View>
 
         <BigButton type='Weiter' placeholder='Weiter' buttonHeight={INPUT_BUTTON_HEIGHT} buttonWidth={INPUT_BUTTON_WIDTH} buttonFunctionality={navigateToNextRegistrationPage}/>
-        <Text style={styles.alreadyHaveAnAccText}>Du hast bereits ein Konto? <Link href={"/login"} style={styles.loginText}>Anmelden</Link></Text>
+        <Text style={universalStyles.styles.textAfterContent}>Du hast bereits ein Konto? <Link href={"/login"} style={universalStyles.styles.boldText}>Anmelden</Link></Text>
         <ProgressBar firstBarColor='#30C5FF' secondBarColor='#4A5160'/>
 
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  alreadyHaveAnAccText: {
-    color: colors.textColor,
-    textAlign: "center",
-    top: universalStyles.TEXT_SPACE_AFTER_CONTENT
-  },
-  loginText: {
-    fontWeight: "700"
-  }
-});
