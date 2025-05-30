@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     },
     headingContainer: {
         height: "20%",
-        width: "100%",
+        width: "90%",
         justifyContent: "space-around",
         marginTop: SCREEN_HEIGHT * 0.04739336493, //40
         marginBottom: SCREEN_HEIGHT * 0.07701421801, //65
