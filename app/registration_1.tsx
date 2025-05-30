@@ -1,19 +1,17 @@
 import React from 'react';
-import { View, StyleSheet, Text, Dimensions, PixelRatio } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Logo from '@/components/Logo';
 import InputField from '@/components/InputField';
-import { useRouter } from 'expo-router';
 import BigButton from '@/components/BigButton';
 import { Link } from 'expo-router';
 import ProgressBar from '@/components/ProgressBar';
-import colors from './utils/colors';
-import universalStyles from './utils/universalStyles';
+import colors from '@/utils/colors';
+import universalStyles from '@/utils/universalStyles';
+import navigateToNextRegistrationPage from './navigation/router';
 
-const { height, width } = Dimensions.get("window");
-
-const inputFieldAndButtonHeight = height * (1/21.1);
-const inputFieldAndButtonWidth = width * (12/13);
+const INPUT_BUTTON_HEIGHT = universalStyles.SCREEN_HEIGHT * 0.05
+const INPUT_BUTTON_WIDTH = universalStyles.SCREEN_WIDTH * 0.90
 
 
 export default function Registration_1() {
@@ -30,25 +28,24 @@ export default function Registration_1() {
         </View>
 
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField inputFieldHeight={inputFieldAndButtonHeight} inputFieldWidth={inputFieldAndButtonWidth} type='Vorname' placeholder='Vorname' />
+            <InputField type='Vorname' placeholder='Vorname' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField inputFieldHeight={inputFieldAndButtonHeight} inputFieldWidth={inputFieldAndButtonWidth} type='Nachname' placeholder='Nachname' />
+            <InputField type='Nachname' placeholder='Nachname' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField inputFieldHeight={inputFieldAndButtonHeight} inputFieldWidth={inputFieldAndButtonWidth} type='Email' placeholder='Email' />
+            <InputField type='Email' placeholder='Email' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField inputFieldHeight={inputFieldAndButtonHeight} inputFieldWidth={inputFieldAndButtonWidth} type='Nutzername' placeholder='Nutzername' />
+            <InputField type='Nutzername' placeholder='Nutzername' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField inputFieldHeight={inputFieldAndButtonHeight} inputFieldWidth={inputFieldAndButtonWidth} type='Passwort' placeholder='Passwort' />
+            <InputField type='Passwort' placeholder='Passwort' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
 
-        <BigButton type='Weiter' placeholder='Weiter' buttonHeight={inputFieldAndButtonHeight} buttonWidth={inputFieldAndButtonWidth} buttonFunctionality={navigateToNextRegistrationPage}/>
+        <BigButton type='Weiter' placeholder='Weiter' buttonHeight={INPUT_BUTTON_HEIGHT} buttonWidth={INPUT_BUTTON_WIDTH} buttonFunctionality={navigateToNextRegistrationPage}/>
         <Text style={styles.alreadyHaveAnAccText}>Du hast bereits ein Konto? <Link href={"/login"} style={styles.loginText}>Anmelden</Link></Text>
         <ProgressBar firstBarColor='#30C5FF' secondBarColor='#4A5160'/>
-
 
       </SafeAreaView>
     </SafeAreaProvider>
@@ -59,15 +56,9 @@ const styles = StyleSheet.create({
   alreadyHaveAnAccText: {
     color: colors.textColor,
     textAlign: "center",
-    top: universalStyles.SPACE_AFTER_CONTENT
+    top: universalStyles.TEXT_SPACE_AFTER_CONTENT
   },
   loginText: {
     fontWeight: "700"
   }
 });
-
-
-function navigateToNextRegistrationPage(): void {
-    const router = useRouter();
-    router.navigate("/registration_2")
-}
