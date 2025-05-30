@@ -3,7 +3,7 @@ import colors from "./colors";
 import fonts from "./fonts";
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
-const TEXT_SPACE_AFTER_CONTENT: number = 0.024 * SCREEN_HEIGHT;
+const TEXT_SPACE_AFTER_CONTENT: number = 0.024 * SCREEN_HEIGHT; //20.256
 
 const styles = StyleSheet.create({
     container: {
@@ -31,6 +31,14 @@ const styles = StyleSheet.create({
       },
       inputFieldMargin: {
         marginBottom: SCREEN_HEIGHT * 0.01184834123 //9.999999998
+      },
+      textAfterContent: {
+        color: colors.textColor,
+        textAlign: "center",
+        top: TEXT_SPACE_AFTER_CONTENT
+      },
+      boldText: {
+        fontWeight: "700"
       }
 })
 
