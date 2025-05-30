@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
         height: "20%",
         width: "100%",
         justifyContent: "space-around",
-        marginTop: SCREEN_HEIGHT * 0.04739336493 ,
-        marginBottom: SCREEN_HEIGHT * 0.07701421801,
+        marginTop: SCREEN_HEIGHT * 0.04739336493, //40
+        marginBottom: SCREEN_HEIGHT * 0.07701421801, //65
       },
       headingText: {
         color: colors.textColor,
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         fontSize: fonts.size.fontSize13
       },
       inputFieldMargin: {
-        marginBottom: SCREEN_HEIGHT * 0.01184834123
+        marginBottom: SCREEN_HEIGHT * 0.01184834123 //9.999999998
       }
 })
 
