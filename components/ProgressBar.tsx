@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import universalStyles from '@/app/utils/universalStyles';
+import universalStyles from '@/utils/universalStyles';
 
 type Props = {
   firstBarColor: string
