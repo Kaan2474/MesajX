@@ -5,6 +5,9 @@ import fonts from "./fonts";
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 const TEXT_SPACE_AFTER_CONTENT: number = 0.024 * SCREEN_HEIGHT; //20.256
 
+const INPUTFIELD_BUTTON_WIDTH = SCREEN_WIDTH * 0.90 //351
+const INPUTFIELD_BUTTON_HEIGHT = SCREEN_HEIGHT * 0.05 //42.2
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -46,5 +49,7 @@ export default {
     styles,
     TEXT_SPACE_AFTER_CONTENT,
     SCREEN_HEIGHT,
-    SCREEN_WIDTH
+    SCREEN_WIDTH,
+    INPUTFIELD_BUTTON_HEIGHT,
+    INPUTFIELD_BUTTON_WIDTH
 }

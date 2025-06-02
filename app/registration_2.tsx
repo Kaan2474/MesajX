@@ -10,9 +10,7 @@ import ProfilePicture from '@/components/ProfilePicture';
 import MediumButton from '@/components/MediumButton';
 import universalStyles from '@/utils/universalStyles';
 
-const BUTTON_HEIGHT = universalStyles.SCREEN_HEIGHT * 0.05
-const INPUTFIELD_HEIGHT = universalStyles.SCREEN_HEIGHT * 0.06516587678
-const INPUTFIELD_BUTTON_WIDTH = universalStyles.SCREEN_WIDTH * 0.90
+const DESCRIPTION_INPUTFIELD_HEIGHT = universalStyles.SCREEN_HEIGHT * 0.06516587678 //55
 
 export default function Registration_2() {
 
@@ -33,10 +31,10 @@ export default function Registration_2() {
         </View>
 
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField inputFieldHeight={INPUTFIELD_HEIGHT} inputFieldWidth={INPUTFIELD_BUTTON_WIDTH} type='Beschreibung' placeholder='Beschreibung' />
+            <InputField inputFieldHeight={DESCRIPTION_INPUTFIELD_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} type='Beschreibung' placeholder='Beschreibung' />
         </View>
 
-        <BigButton type='Registrieren' placeholder='Registrieren' buttonHeight={BUTTON_HEIGHT} buttonWidth={INPUTFIELD_BUTTON_WIDTH} buttonFunctionality={() => alert("You pressed a Button!")}/>
+        <BigButton type='Registrieren' placeholder='Registrieren' buttonHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} buttonWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} buttonFunctionality={() => alert("You pressed a Button!")}/>
         <Text style={universalStyles.styles.textAfterContent}>Du hast bereits ein Konto? <Link href={"/login"} style={universalStyles.styles.boldText}>Anmelden</Link></Text>
         <ProgressBar firstBarColor='#4A5160' secondBarColor='#30C5FF'/>
 
