@@ -26,7 +26,7 @@ export default function Login() {
             <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} type='Nutzername' placeholder='Nutzername' />
           </View>
           <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} type='Passwort' placeholder='Passwort' />
-          <Link href={"/(tabs)/addfriend"} style={styles.passwordForgotten}>Passwort vergessen?</Link>
+          <Link href={"/passwordForgotten_1"} style={styles.passwordForgotten}>Passwort vergessen?</Link>
         </View>
 
         <BigButton type="Anmelden" placeholder='Anmelden' buttonHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} buttonWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH}/>
