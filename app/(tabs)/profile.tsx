@@ -2,7 +2,9 @@ import { Text, View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import ProfilePicture from '@/components/ProfilePicture';
-import MediumButton from '@/components/MediumButton';
+import BigButton from '@/components/BigButton';
+import buttonStyles from '@/utils/buttonStyles';
+import fonts from '@/utils/fonts';
 
 export default function Profile() {
   return (
@@ -22,8 +24,8 @@ export default function Profile() {
         </View>
 
         <View style={styles.buttonContainer}>
-          <MediumButton label={"Abmelden"}/>
-          <MediumButton label={"Einstellungen"}/>
+          <BigButton type='Abmelden' placeholder='Abmelden' buttonHeight={buttonStyles.buttonSizes.mediumButtonHeight} buttonWidth={buttonStyles.buttonSizes.mediumButtonWidth} fontSize={fonts.size.mediumButton} iconSize={buttonStyles.iconSizes.mediumButtonIconSize} iconPosition={buttonStyles.iconPositions.mediumButton} />
+          <BigButton type='Einstellungen' placeholder='Einstellungen' buttonHeight={buttonStyles.buttonSizes.mediumButtonHeight} buttonWidth={buttonStyles.buttonSizes.mediumButtonWidth} fontSize={fonts.size.mediumButton} iconSize={buttonStyles.iconSizes.mediumButtonIconSize} iconPosition={buttonStyles.iconPositions.mediumButton} />
         </View>
 
         <View style={styles.friendsAndMembershipContainer}>

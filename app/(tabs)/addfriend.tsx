@@ -2,8 +2,11 @@ import { Text, View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Logo from '@/components/Logo';
 import BigButton from '@/components/BigButton';
-import MediumButton from '@/components/MediumButton';
 import InputField from '@/components/InputField';
+import buttonStyles from '@/utils/buttonStyles';
+import fonts from '@/utils/fonts';
+import universalStyles from '@/utils/universalStyles';
+import { Link } from 'expo-router';
 
 export default function AddFriend() {
   return (
@@ -19,14 +22,16 @@ export default function AddFriend() {
 
         <View style={styles.searchUserAddFriendContainer}>
           <View style={styles.searchUserContainer}>
-            <InputField inputFieldHeight={40} inputFieldWidth={360} type="Suchen" placeholder='Nutzername'/>
+            <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} type="Suchen" placeholder='Nutzername'/>
           </View>
 
-          <BigButton type="Freund hinzufügen" placeholder='Freund hinzufügen'/>
+          <BigButton type="Freund hinzufügen" placeholder='Freund hinzufügen' buttonHeight={buttonStyles.buttonSizes.bigButtonHeight} buttonWidth={buttonStyles.buttonSizes.bigButtonWidth} fontSize={fonts.size.bigButton} iconSize={buttonStyles.iconSizes.bigButtonIconSize} iconPosition={buttonStyles.iconPositions.bigButton}/>
         </View>
 
+        <Link href={"/login"}>Gehe zu Login</Link>
+
         <View style={styles.friendRequestButtonContainer}>
-          <MediumButton label='Anfragen' />
+          <BigButton type="Anfragen" placeholder='Anfragen' buttonHeight={buttonStyles.buttonSizes.bigButtonHeight} buttonWidth={buttonStyles.buttonSizes.bigButtonWidth} fontSize={fonts.size.bigButton} iconSize={buttonStyles.iconSizes.bigButtonIconSize} iconPosition={buttonStyles.iconPositions.bigButton}/>
         </View>
 
       </SafeAreaView>

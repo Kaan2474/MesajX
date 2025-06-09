@@ -7,8 +7,9 @@ import BigButton from '@/components/BigButton';
 import { Link } from 'expo-router';
 import ProgressBar from '@/components/ProgressBar';
 import ProfilePicture from '@/components/ProfilePicture';
-import MediumButton from '@/components/MediumButton';
 import universalStyles from '@/utils/universalStyles';
+import buttonStyles from '@/utils/buttonStyles';
+import fonts from '@/utils/fonts';
 
 const DESCRIPTION_INPUTFIELD_HEIGHT = universalStyles.SCREEN_HEIGHT * 0.06516587678 //55
 
@@ -27,14 +28,14 @@ export default function Registration_2() {
 
         <View style={styles.profilePictureAddPhotoButtonContainer}>
             <ProfilePicture size='big' initials='KH'/>
-            <MediumButton label='Foto hochladen' />
+            <BigButton type='Foto hochladen' placeholder='Foto hochladen' buttonHeight={buttonStyles.buttonSizes.mediumButtonHeight} buttonWidth={buttonStyles.buttonSizes.mediumButtonWidth} fontSize={fonts.size.mediumButton} iconSize={buttonStyles.iconSizes.mediumButtonIconSize} iconPosition={buttonStyles.iconPositions.mediumButton} />
         </View>
 
         <View style={universalStyles.styles.inputFieldMargin}>
             <InputField inputFieldHeight={DESCRIPTION_INPUTFIELD_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} type='Beschreibung' placeholder='Beschreibung' />
         </View>
 
-        <BigButton type='Registrieren' placeholder='Registrieren' buttonHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} buttonWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} buttonFunctionality={() => alert("You pressed a Button!")}/>
+        <BigButton type='Registrieren' placeholder='Registrieren' buttonHeight={buttonStyles.buttonSizes.bigButtonHeight} buttonWidth={buttonStyles.buttonSizes.bigButtonHeight} fontSize={fonts.size.bigButton} iconSize={buttonStyles.iconSizes.bigButtonIconSize} iconPosition={buttonStyles.iconPositions.bigButton} />
         <Text style={universalStyles.styles.textAfterContent}>Du hast bereits ein Konto? <Link href={"/login"} style={universalStyles.styles.boldText}>Anmelden</Link></Text>
         <ProgressBar firstBarColor='#4A5160' secondBarColor='#30C5FF'/>
 
