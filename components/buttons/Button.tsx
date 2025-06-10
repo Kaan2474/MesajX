@@ -1,53 +1,38 @@
-import { StyleSheet, View, Pressable, Text } from 'react-native';
+import { View, Pressable, Text } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import Feather from '@expo/vector-icons/Feather';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { Ionicons, Octicons } from '@expo/vector-icons';
+import colors from '@/utils/colors';
+import buttonStyles from '@/utils/buttonStyles';
 
 type Props = {
-  type: string;
-  placeholder: string;
   buttonHeight: number;
   buttonWidth: number;
   buttonFunctionality?: () => void;
+  fontSize: number;
+  label: string;
+  iconPosition: number;
+  iconType: string;
+  iconSize: number;
 };
 
-export default function BigButton({ type, placeholder, buttonHeight, buttonWidth, buttonFunctionality }: Props) {
-
+export default function Button({ buttonHeight, buttonWidth, buttonFunctionality, fontSize, label, iconPosition, iconType, iconSize }: Props) {
   return (
-    <View style={{height: buttonHeight, width: buttonWidth}}>
-      <Pressable style={styles.button} onPress={buttonFunctionality}>
-        <Text style={styles.buttonLabel}>{placeholder}</Text>
-        <View style={styles.iconContainer}>
-          {!! (type === "Anmelden" || type === "Registrieren") && <MaterialIcons name="login" size={18} color="#fff"/>}
-          {!! (type === "Weiter") && <MaterialIcons name="navigate-next" color={"#fff"} size={18}/>}
-          {!! (type === "Passwort zurücksetzen") && <MaterialIcons name="lock-reset" color={"#fff"} size={18}/>}
-          {!! (type === "Speichern") && <Feather name="save" color={"#fff"} size={18}/>}
-          {!! (type === "Freund hinzufügen") && <AntDesign name="adduser" color={"#fff"} size={18} />}
-        </View>
-      </Pressable>
-    </View>
+    <Pressable style={[{height: buttonHeight}, {width: buttonWidth}, buttonStyles.styles.container]} onPress={buttonFunctionality}>
+      <Text style={[buttonStyles.styles.label, {fontSize: fontSize}]}>{label}</Text>
+      <View style={[buttonStyles.styles.icon, {right: iconPosition}]}>
+        {!! (iconType === "Anmelden" || iconType === "Registrieren" || iconType === "Abmelden") && <MaterialIcons name="login" size={iconSize} color={colors.buttonIcon}/>}
+        {!! (iconType === "Weiter") && <MaterialIcons name="navigate-next" size={iconSize} color={colors.buttonIcon}/>}
+        {!! (iconType === "Passwort zurücksetzen") && <MaterialIcons name="lock-reset" size={iconSize} color={colors.buttonIcon} />}
+        {!! (iconType === "Speichern") && <Feather name="save" size={iconSize} color={colors.buttonIcon}/>}
+        {!! (iconType === "Freund hinzufügen") && <AntDesign name="adduser" size={iconSize} color={colors.buttonIcon}/>}
+        {!! (iconType === "Einstellungen") && <Feather name="settings" size={iconSize} color={colors.buttonIcon} />}
+        {!! (iconType === "Chatten") &&  <Ionicons name="chatbubble-ellipses-outline" size={iconSize} color={colors.buttonIcon}/>}
+        {!! (iconType === "Entfernen") &&  <AntDesign name="delete" size={iconSize} color={colors.buttonIcon}/>}
+        {!! (iconType === "Anfragen") &&  <Octicons name="people" size={iconSize} color={colors.buttonIcon}/>}
+        {!! (iconType === "Foto hochladen") &&  <AntDesign name="pluscircleo" size={iconSize} color={colors.buttonIcon}/> }
+      </View>
+    </Pressable>
   );
 }
-
-
-
-
-const styles = StyleSheet.create({
-  button: {
-    borderRadius: 10,
-    height: '100%',
-    alignItems: 'center',
-    justifyContent: "center",
-    flexDirection: 'row',
-    backgroundColor: "#30C5FF",
-  },
-  buttonLabel: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: "700",
-  },
-  iconContainer: {
-    position: "absolute",
-    right: 15
-  },
-});
