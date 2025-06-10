@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, FlatList } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import IconButton from '@/components/IconButton';
+import IconButton from '@/components/buttons/IconButton';
 import Logo from '@/components/Logo';
 import ChatContainer from '@/components/ChatContainer';
 import InputField from '@/components/InputField';
