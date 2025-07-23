@@ -9,7 +9,7 @@ const INPUTFIELD_BUTTON_HEIGHT = SCREEN_HEIGHT * 0.05 //42.2
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.appBackgroundColor,
+        backgroundColor: colors.appBackground,
         alignItems: "center"
     },
     headingContainer: {
@@ -20,21 +20,21 @@ const styles = StyleSheet.create({
         marginBottom: SCREEN_HEIGHT * 0.07701421801, //65
       },
       headingText: {
-        color: colors.textColor,
-        fontSize: fonts.size.fontSize22,
+        color: colors.text,
+        fontSize: fonts.size.heading,
         fontWeight: "700",
         textAlign: "center"
       },
       descriptionText: {
-        color: colors.textColor,
+        color: colors.text,
         textAlign: "center",
-        fontSize: fonts.size.fontSize13
+        fontSize: fonts.size.text
       },
       inputFieldMargin: {
         marginBottom: SCREEN_HEIGHT * 0.01184834123 //9.999999998
       },
       textAfterContent: {
-        color: colors.textColor,
+        color: colors.text,
         textAlign: "center",
         top: 0.024 * SCREEN_HEIGHT //20.256
       },
