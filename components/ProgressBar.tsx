@@ -1,32 +1,35 @@
-import { StyleSheet, View } from 'react-native';
-import universalStyles from '@/utils/universalStyles';
+import { View } from 'react-native';
+import progressBarStyles from '@/utils/progressBarStyles';
 
 type Props = {
+  count: number
   firstBarColor: string
   secondBarColor: string
+  thirdBarColor?: string
+  barHeight: number
+  barWidth: number
+  barRadius: number
 };
 
-export default function ProgressBar({ firstBarColor, secondBarColor }: Props) {
+export default function ProgressBar({ count, firstBarColor, secondBarColor, thirdBarColor, barHeight, barWidth, barRadius }: Props) {
 
-  return (
-    <View style={styles.container}>
-        <View style={[styles.bar, {backgroundColor: firstBarColor}]} />
-        <View style={[styles.bar, {backgroundColor: secondBarColor}]} />
-    </View>
-  );
+  if(count === 2) {
+    return (
+      <View style={progressBarStyles.styles.container}>
+          <View style={[{height: barHeight}, {width: barWidth}, {borderRadius: barRadius}, {backgroundColor: firstBarColor}]} />
+          <View style={[{height: barHeight}, {width: barWidth}, {borderRadius: barRadius}, {backgroundColor: secondBarColor}]} />
+      </View>
+    );
+  }
+
+  else {
+    return (
+      <View style={progressBarStyles.styles.container}>
+          <View style={[{height: barHeight}, {width: barWidth}, {borderRadius: barRadius}, {backgroundColor: firstBarColor}]} />
+          <View style={[{height: barHeight}, {width: barWidth}, {borderRadius: barRadius}, {backgroundColor: secondBarColor}]} />
+          <View style={[{height: barHeight}, {width: barWidth}, {borderRadius: barRadius}, {backgroundColor: thirdBarColor}]} />
+      </View>
+    );
+  }
+
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    width: universalStyles.SCREEN_WIDTH * 0.90, //351
-    justifyContent: "space-between",
-    position: "absolute", 
-    bottom: universalStyles.SCREEN_HEIGHT * 0.05331753555, //45
-  },
-  bar: {
-    height: universalStyles.SCREEN_HEIGHT * 0.01777251185, //15
-    width: universalStyles.SCREEN_WIDTH * 0.4230769231, //165
-    borderRadius: universalStyles.SCREEN_HEIGHT * 0.01777251185 //15
-  },
-});
