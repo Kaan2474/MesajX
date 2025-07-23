@@ -1,17 +1,17 @@
 const colors = {
     //General Colors
-    appBackgroundColor: "#1F2227",
-    textColor: "#E5E9F0",
+    appBackground: "#1F2227",
+    text: "#E5E9F0",
     //Inputfields
-    inputFieldColor: "#4A5160",
-    inputFieldIconColor: "#30C5FF",
+    inputfieldBackground: "#4A5160",
+    inputfieldIcon: "#30C5FF",
     //Buttons
-    buttonColor: "#30C5FF",
-    buttonIconColor: "#fff",
-    buttonTextColor: "#fff",
+    buttonBackground: "#30C5FF",
+    buttonIcon: "#fff",
+    buttonText: "#fff",
     //Online, Offline Status
-    onlineColor: "26D07C",
-    offlineColor: "#FF4F4F"
+    onlineStatus: "26D07C",
+    offlineStatus: "#FF4F4F"
 }
 
 export default colors;
