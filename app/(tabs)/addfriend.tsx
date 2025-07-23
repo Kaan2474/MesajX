@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Logo from '@/components/Logo';
-import BigButton from '@/components/BigButton';
+import Button from '@/components/buttons/Button';
 import InputField from '@/components/InputField';
 import buttonStyles from '@/utils/buttonStyles';
 import fonts from '@/utils/fonts';
@@ -22,16 +22,16 @@ export default function AddFriend() {
 
         <View style={styles.searchUserAddFriendContainer}>
           <View style={styles.searchUserContainer}>
-            <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} type="Suchen" placeholder='Nutzername'/>
+            <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} iconType="Suchen" placeholder='Nutzername'/>
           </View>
 
-          <BigButton type="Freund hinzufügen" placeholder='Freund hinzufügen' buttonHeight={buttonStyles.buttonSizes.bigButtonHeight} buttonWidth={buttonStyles.buttonSizes.bigButtonWidth} fontSize={fonts.size.bigButton} iconSize={buttonStyles.iconSizes.bigButtonIconSize} iconPosition={buttonStyles.iconPositions.bigButton}/>
+          <Button buttonHeight={buttonStyles.heights.bigButton} buttonWidth={buttonStyles.widths.bigButton} fontSize={fonts.size.bigButton} label='Freund hinzufügen' iconPosition={buttonStyles.iconRightPositions.bigButton} iconType='Freund hinzufügen' iconSize={buttonStyles.iconSizes.bigButton}/>
         </View>
 
         <Link href={"/login"}>Gehe zu Login</Link>
 
         <View style={styles.friendRequestButtonContainer}>
-          <BigButton type="Anfragen" placeholder='Anfragen' buttonHeight={buttonStyles.buttonSizes.bigButtonHeight} buttonWidth={buttonStyles.buttonSizes.bigButtonWidth} fontSize={fonts.size.bigButton} iconSize={buttonStyles.iconSizes.bigButtonIconSize} iconPosition={buttonStyles.iconPositions.bigButton}/>
+          <Button buttonHeight={buttonStyles.heights.mediumButton} buttonWidth={buttonStyles.widths.mediumButton} fontSize={fonts.size.mediumButton} label='Anfragen' iconPosition={buttonStyles.iconRightPositions.mediumButton} iconType='Anfragen' iconSize={buttonStyles.iconSizes.mediumButton}/>
         </View>
 
       </SafeAreaView>
