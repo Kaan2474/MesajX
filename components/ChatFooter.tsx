@@ -1,12 +1,12 @@
 import { StyleSheet, View } from 'react-native';
 import InputField from './InputField';
-import IconButton from './IconButton';
+import IconButton from './buttons/IconButton';
 
 export default function ChatFooter() {
 
   return (
     <View style={styles.container}>
-      <InputField inputFieldHeight={40} inputFieldWidth={303.5} type="Chat" placeholder='Hier tippen...' />
+      <InputField inputFieldHeight={40} inputFieldWidth={303.5} iconType="Chat" placeholder='Hier tippen...' />
       <IconButton type='Nachricht senden' functionality={() => alert("You pressed a button")} />
     </View>
   );

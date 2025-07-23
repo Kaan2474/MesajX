@@ -3,7 +3,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import ProfilePicture from '@/components/ProfilePicture';
 import buttonStyles from '@/utils/buttonStyles';
-import BigButton from '@/components/BigButton';
+import Button from '@/components/buttons/Button';
 import fonts from '@/utils/fonts';
 
 export default function FriendProfile() {
@@ -26,8 +26,8 @@ export default function FriendProfile() {
         </View>
 
         <View style={styles.buttonContainer}>
-          <BigButton type='Chatten' placeholder='Chatten' buttonHeight={buttonStyles.buttonSizes.mediumButtonHeight} buttonWidth={buttonStyles.buttonSizes.mediumButtonWidth} fontSize={fonts.size.mediumButton} iconSize={buttonStyles.iconSizes.mediumButtonIconSize} iconPosition={buttonStyles.iconPositions.mediumButton} />
-          <BigButton type='Entfernen' placeholder='Entfernen' buttonHeight={buttonStyles.buttonSizes.mediumButtonHeight} buttonWidth={buttonStyles.buttonSizes.mediumButtonWidth} fontSize={fonts.size.mediumButton} iconSize={buttonStyles.iconSizes.mediumButtonIconSize} iconPosition={buttonStyles.iconPositions.mediumButton} />
+          <Button buttonHeight={buttonStyles.heights.mediumButton} buttonWidth={buttonStyles.widths.mediumButton} fontSize={fonts.size.mediumButton} label='Chatten' iconPosition={buttonStyles.iconRightPositions.mediumButton} iconType='Chatten' iconSize={buttonStyles.iconSizes.mediumButton}/>
+          <Button buttonHeight={buttonStyles.heights.mediumButton} buttonWidth={buttonStyles.widths.mediumButton} fontSize={fonts.size.mediumButton} label='Entfernen' iconPosition={buttonStyles.iconRightPositions.mediumButton} iconType='Entfernen' iconSize={buttonStyles.iconSizes.mediumButton}/>
         </View>
 
         <View style={styles.friendsAndMembershipContainer}>

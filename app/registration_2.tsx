@@ -3,7 +3,7 @@ import { View, StyleSheet, Text } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Logo from '@/components/Logo';
 import InputField from '@/components/InputField';
-import BigButton from '@/components/BigButton';
+import Button from '@/components/buttons/Button';
 import { Link } from 'expo-router';
 import ProgressBar from '@/components/ProgressBar';
 import ProfilePicture from '@/components/ProfilePicture';
@@ -28,14 +28,14 @@ export default function Registration_2() {
 
         <View style={styles.profilePictureAddPhotoButtonContainer}>
             <ProfilePicture size='big' initials='KH'/>
-            <BigButton type='Foto hochladen' placeholder='Foto hochladen' buttonHeight={buttonStyles.buttonSizes.mediumButtonHeight} buttonWidth={buttonStyles.buttonSizes.mediumButtonWidth} fontSize={fonts.size.mediumButton} iconSize={buttonStyles.iconSizes.mediumButtonIconSize} iconPosition={buttonStyles.iconPositions.mediumButton} />
+            <Button buttonHeight={buttonStyles.heights.mediumButton} buttonWidth={buttonStyles.widths.mediumButton} fontSize={fonts.size.mediumButton} label='Foto hochladen' iconPosition={buttonStyles.iconRightPositions.mediumButton} iconType='Foto hochladen' iconSize={buttonStyles.iconSizes.mediumButton}/>
         </View>
 
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField inputFieldHeight={DESCRIPTION_INPUTFIELD_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} type='Beschreibung' placeholder='Beschreibung' />
+            <InputField inputFieldHeight={DESCRIPTION_INPUTFIELD_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} iconType='Beschreibung' placeholder='Beschreibung' />
         </View>
 
-        <BigButton type='Registrieren' placeholder='Registrieren' buttonHeight={buttonStyles.buttonSizes.bigButtonHeight} buttonWidth={buttonStyles.buttonSizes.bigButtonHeight} fontSize={fonts.size.bigButton} iconSize={buttonStyles.iconSizes.bigButtonIconSize} iconPosition={buttonStyles.iconPositions.bigButton} />
+        <Button buttonHeight={buttonStyles.heights.bigButton} buttonWidth={buttonStyles.widths.bigButton} fontSize={fonts.size.bigButton} label='Registrieren' iconPosition={buttonStyles.iconRightPositions.bigButton} iconType='Registrieren' iconSize={buttonStyles.iconSizes.bigButton}/>
         <Text style={universalStyles.styles.textAfterContent}>Du hast bereits ein Konto? <Link href={"/login"} style={universalStyles.styles.boldText}>Anmelden</Link></Text>
         <ProgressBar firstBarColor='#4A5160' secondBarColor='#30C5FF'/>
 

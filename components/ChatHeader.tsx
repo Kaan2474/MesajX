@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text } from 'react-native';
 import { useRouter } from 'expo-router';
 import ProfilePicture from './ProfilePicture';
-import BackButton from './BackButton';
+import BackButton from './buttons/BackButton';
 
 export default function ChatHeader() {
 

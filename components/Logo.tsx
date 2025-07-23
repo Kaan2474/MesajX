@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 import { Image } from 'expo-image';
-import BackButton from './BackButton';
+import BackButton from './buttons/BackButton';
 
 type Props = {
   withBackButton: boolean

@@ -5,7 +5,7 @@ import ProfilePicture from '@/components/ProfilePicture';
 import buttonStyles from '@/utils/buttonStyles';
 import fonts from '@/utils/fonts';
 import InputField from '@/components/InputField';
-import BigButton from '@/components/BigButton';
+import Button from '@/components/buttons/Button';
 
 export default function Settings() {
   return (
@@ -15,27 +15,27 @@ export default function Settings() {
         
         <View style={styles.profilePictureAddPictureButtonContainer}>
             <ProfilePicture size='big' initials='KH' />
-            <BigButton type='Foto hochladen' placeholder='Foto hochladen' buttonHeight={buttonStyles.buttonSizes.mediumButtonHeight} buttonWidth={buttonStyles.buttonSizes.mediumButtonWidth} fontSize={fonts.size.mediumButton} iconSize={buttonStyles.iconSizes.mediumButtonIconSize} iconPosition={buttonStyles.iconPositions.mediumButton} />
+            <Button buttonHeight={buttonStyles.heights.mediumButton} buttonWidth={buttonStyles.widths.mediumButton} fontSize={fonts.size.mediumButton} label='Foto hochladen' iconPosition={buttonStyles.iconRightPositions.mediumButton} iconType='Foto hochladen' iconSize={buttonStyles.iconSizes.mediumButton}/>
         </View>
 
         <View style={styles.inputFieldsSaveButtonContainer}>
             <View>
-                <InputField type="Vorname" placeholder="Kaan" inputFieldHeight={40} inputFieldWidth={360}/>
+                <InputField iconType="Vorname" placeholder="Kaan" inputFieldHeight={40} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-                <InputField type="Nachname" placeholder="Hisiroglu" inputFieldHeight={40} inputFieldWidth={360}/>
+                <InputField iconType="Nachname" placeholder="Hisiroglu" inputFieldHeight={40} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-                <InputField type="Nutzername" placeholder="kaan2474" inputFieldHeight={40} inputFieldWidth={360}/>
+                <InputField iconType="Nutzername" placeholder="kaan2474" inputFieldHeight={40} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-                <InputField type="Passwort" placeholder="**************" inputFieldHeight={40} inputFieldWidth={360}/>
+                <InputField iconType="Passwort" placeholder="**************" inputFieldHeight={40} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-                <InputField type="Beschreibung" placeholder="Hallo, mein Name ist Kaan und meine größte Leidenschaft ist das Programmieren!" inputFieldHeight={55} inputFieldWidth={360}/>
+                <InputField iconType="Beschreibung" placeholder="Hallo, mein Name ist Kaan und meine größte Leidenschaft ist das Programmieren!" inputFieldHeight={55} inputFieldWidth={360}/>
             </View>
             <View style={styles.singleInputFieldSaveButtonContainer}>
-              <BigButton type='Speichern' placeholder='Speichern' buttonHeight={buttonStyles.buttonSizes.bigButtonHeight} buttonWidth={buttonStyles.buttonSizes.bigButtonHeight} fontSize={fonts.size.bigButton} iconSize={buttonStyles.iconSizes.bigButtonIconSize} iconPosition={buttonStyles.iconPositions.bigButton} />
+              <Button buttonHeight={buttonStyles.heights.bigButton} buttonWidth={buttonStyles.widths.bigButton} fontSize={fonts.size.bigButton} label='Speichern' iconPosition={buttonStyles.iconRightPositions.bigButton} iconType='Speichern' iconSize={buttonStyles.iconSizes.bigButton}/>
             </View>
         </View>
       </SafeAreaView>

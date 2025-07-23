@@ -1,7 +1,9 @@
 import { StyleSheet, View, Text } from 'react-native';
 import ProfilePicture from '@/components/ProfilePicture';
 import { useRouter } from 'expo-router';
-import SmallButton from './SmallButton';
+import Button from './buttons/Button';
+import buttonStyles from '@/utils/buttonStyles';
+import fonts from '@/utils/fonts';
 
 type Props = {
     initials: string,
@@ -21,7 +23,7 @@ export default function NewMessageContainer({ initials, status, name, functional
         <Text style={styles.name}>{name}</Text>
       </View>
       <View style={styles.chatButtonContainer}>
-        <SmallButton functionality={functionality}/>
+        <Button buttonHeight={buttonStyles.heights.mediumButton} buttonWidth={buttonStyles.widths.mediumButton} fontSize={fonts.size.mediumButton} label='Chatten' iconPosition={buttonStyles.iconRightPositions.mediumButton} iconType='Chatten' iconSize={buttonStyles.iconSizes.mediumButton}/>
       </View>
     </View>
   );

@@ -3,7 +3,9 @@ import { View, StyleSheet, Text } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Logo from '@/components/Logo';
 import InputField from '@/components/InputField';
-import BigButton from '@/components/BigButton';
+import Button from '@/components/buttons/Button';
+import buttonStyles from '@/utils/buttonStyles';
+import fonts from '@/utils/fonts';
 import { Link } from 'expo-router';
 import universalStyles from '@/utils/universalStyles';
 import colors from '@/utils/colors';
@@ -29,7 +31,7 @@ export default function Login() {
           <Link href={"/passwordForgotten_1"} style={styles.passwordForgotten}>Passwort vergessen?</Link>
         </View>
 
-        <BigButton type="Anmelden" placeholder='Anmelden' buttonHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} buttonWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH}/>
+        <Button buttonHeight={buttonStyles.heights.bigButton} buttonWidth={buttonStyles.widths.bigButton} fontSize={fonts.size.bigButton} label='Anmelden' iconPosition={buttonStyles.iconRightPositions.bigButton} iconType='Anmelden' iconSize={buttonStyles.iconSizes.bigButton}/>
         <Text style={universalStyles.styles.textAfterContent}>Du hast noch kein Konto? <Link href={"/registration_1"} style={universalStyles.styles.boldText}>Registrieren</Link></Text>
 
       </SafeAreaView>

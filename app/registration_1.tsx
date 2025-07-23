@@ -3,7 +3,9 @@ import { View, StyleSheet, Text } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Logo from '@/components/Logo';
 import InputField from '@/components/InputField';
-import BigButton from '@/components/BigButton';
+import Button from '@/components/buttons/Button';
+import buttonStyles from '@/utils/buttonStyles';
+import fonts from '@/utils/fonts';
 import { Link } from 'expo-router';
 import ProgressBar from '@/components/ProgressBar';
 import colors from '@/utils/colors';
@@ -28,22 +30,22 @@ export default function Registration_1() {
         </View>
 
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField type='Vorname' placeholder='Vorname' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
+            <InputField iconType='Vorname' placeholder='Vorname' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField type='Nachname' placeholder='Nachname' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
+            <InputField iconType='Nachname' placeholder='Nachname' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField type='Email' placeholder='Email' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
+            <InputField iconType='Email' placeholder='Email' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField type='Nutzername' placeholder='Nutzername' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
+            <InputField iconType='Nutzername' placeholder='Nutzername' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
         <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField type='Passwort' placeholder='Passwort' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
+            <InputField iconType='Passwort' placeholder='Passwort' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
 
-        <BigButton type='Weiter' placeholder='Weiter' buttonHeight={INPUT_BUTTON_HEIGHT} buttonWidth={INPUT_BUTTON_WIDTH} buttonFunctionality={navigateToNextRegistrationPage}/>
+        <Button buttonHeight={buttonStyles.heights.bigButton} buttonWidth={buttonStyles.widths.bigButton} fontSize={fonts.size.bigButton} label='Weiter' iconPosition={buttonStyles.iconRightPositions.bigButton} iconType='Weiter' iconSize={buttonStyles.iconSizes.bigButton}/>
         <Text style={universalStyles.styles.textAfterContent}>Du hast bereits ein Konto? <Link href={"/login"} style={universalStyles.styles.boldText}>Anmelden</Link></Text>
         <ProgressBar firstBarColor='#30C5FF' secondBarColor='#4A5160'/>
 
