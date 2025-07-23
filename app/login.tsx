@@ -25,9 +25,9 @@ export default function Login() {
 
         <View>
           <View style={universalStyles.styles.inputFieldMargin}>
-            <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} type='Nutzername' placeholder='Nutzername' />
+            <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} iconType='Nutzername' placeholder='Nutzername' />
           </View>
-          <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} type='Passwort' placeholder='Passwort' />
+          <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} iconType='Passwort' placeholder='Passwort' />
           <Link href={"/passwordForgotten_1"} style={styles.passwordForgotten}>Passwort vergessen?</Link>
         </View>
 
@@ -41,7 +41,7 @@ export default function Login() {
 
 const styles = StyleSheet.create({
   passwordForgotten: {
-    color: colors.textColor,
+    color: colors.text,
     textAlign: "right",
     marginTop: universalStyles.SCREEN_HEIGHT * 0.005924170616, //5
     marginBottom: universalStyles.SCREEN_HEIGHT * 0.01184834123 //9.999999998
