@@ -11,7 +11,7 @@ export default function BackToLogin() {
   return (
     <View style={styles.backToLoginContainer}>
         <Ionicons name="chevron-back" size={buttonStyles.iconSizes.bigButton} color={colors.text}/>
-        <Link style={styles.backToLoginText} href={"/passwordForgotten_2"}>Zurück zum Login</Link>
+        <Link style={styles.backToLoginText} href={"/login"}>Zurück zum Login</Link>
   </View>
   );
 }
