@@ -8,8 +8,11 @@ const scaleFontSize = (fontSize: number) => {
   }
 
 const size = {
-    fontSize22: scaleFontSize(22),
-    fontSize13: scaleFontSize(13)
+    heading: scaleFontSize(22),
+    text: scaleFontSize(13),
+    twoFactorAuthText: scaleFontSize(60),
+    bigButton: scaleFontSize(16),
+    mediumButton: scaleFontSize(13)
 }
 
 export default {
