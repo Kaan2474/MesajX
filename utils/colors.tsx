@@ -16,7 +16,10 @@ const colors = {
     buttonText: "#fff",
     //Online, Offline Status
     onlineStatus: "26D07C",
-    offlineStatus: "#FF4F4F"
+    offlineStatus: "#FF4F4F",
+    //Progressbar
+    filledBar: "#30C5FF",
+    emptyBar: "#4A5160"
 }
 
 export default colors;

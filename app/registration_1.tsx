@@ -11,6 +11,7 @@ import ProgressBar from '@/components/ProgressBar';
 import colors from '@/utils/colors';
 import universalStyles from '@/utils/universalStyles';
 import navigateToNextRegistrationPage from './navigation/router';
+import progressBarStyles from '@/utils/progressBarStyles';
 
 const INPUT_BUTTON_HEIGHT = universalStyles.SCREEN_HEIGHT * 0.05
 const INPUT_BUTTON_WIDTH = universalStyles.SCREEN_WIDTH * 0.90
@@ -47,7 +48,7 @@ export default function Registration_1() {
 
         <Button buttonHeight={buttonStyles.heights.bigButton} buttonWidth={buttonStyles.widths.bigButton} fontSize={fonts.size.bigButton} label='Weiter' iconPosition={buttonStyles.iconRightPositions.bigButton} iconType='Weiter' iconSize={buttonStyles.iconSizes.bigButton}/>
         <Text style={universalStyles.styles.textAfterContent}>Du hast bereits ein Konto? <Link href={"/login"} style={universalStyles.styles.boldText}>Anmelden</Link></Text>
-        <ProgressBar firstBarColor='#30C5FF' secondBarColor='#4A5160'/>
+        <ProgressBar count={2} firstBarColor={colors.filledBar} secondBarColor={colors.emptyBar} barHeight={progressBarStyles.height} barWidth={progressBarStyles.widths.big} barRadius={progressBarStyles.borderRadius}/>
 
       </SafeAreaView>
     </SafeAreaProvider>
