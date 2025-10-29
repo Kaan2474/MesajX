@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import { Image } from 'expo-image';
+import { Image } from 'react-native';
 import BackButton from './buttons/BackButton';
 
 type Props = {

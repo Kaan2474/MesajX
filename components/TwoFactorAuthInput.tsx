@@ -1,8 +1,7 @@
-import { useState, useRef } from 'react';
-import { View, StyleSheet } from 'react-native';
-import { GestureHandlerRootView, TextInput } from 'react-native-gesture-handler';
 import colors from '@/utils/colors';
 import fonts from '@/utils/fonts';
+import { useRef, useState } from 'react';
+import { StyleSheet, TextInput, View } from 'react-native';
 
 type Props = {
 
@@ -74,12 +73,12 @@ export default function TwoFactorAuthInput({  }: Props) {
     }
 
     return (
-        <GestureHandlerRootView style={styles.container}>
+        <View style={styles.container}>
             <TextInput style={filledInputStyle1} maxLength={1} keyboardType='numeric' onChangeText={handleInput1} ref={firstField} autoFocus={true}/>
             <TextInput style={filledInputStyle2} maxLength={1} keyboardType='numeric' onChangeText={handleInput2} ref={secondField}/>
             <TextInput style={filledInputStyle3} maxLength={1} keyboardType='numeric' onChangeText={handleInput3} ref={thirdField}/>
             <TextInput style={filledInputStyle4} maxLength={1} keyboardType='numeric' onChangeText={handleInput4} ref={fourthField}/>
-        </GestureHandlerRootView>
+        </View>
     )
 }
 

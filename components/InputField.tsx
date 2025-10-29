@@ -1,13 +1,11 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { TextInput } from "react-native-gesture-handler";
-import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import colors from '@/utils/colors';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import React from 'react';
+import { StyleSheet, TextInput, View } from 'react-native';
 
 type Props = {
   inputFieldHeight: number;
@@ -23,7 +21,7 @@ type Props = {
 export default function Inputfield({ inputFieldHeight, inputFieldWidth, iconType, placeholder }: Props) {
 
   return (
-    <GestureHandlerRootView style={[styles.inputContainer, {height: inputFieldHeight}, {width: inputFieldWidth}]}>
+    <View style={[styles.inputContainer, {height: inputFieldHeight}, {width: inputFieldWidth}]}>
         <View style={styles.iconContainer}>
           {!! (iconType === "Vorname" || iconType ==="Nachname") && <FontAwesome name="user" size={18} color={colors.inputfieldIcon} />}
           {!! (iconType === "Email") && <MaterialIcons name="email" size={18} color={colors.inputfieldIcon} />}
@@ -59,7 +57,7 @@ export default function Inputfield({ inputFieldHeight, inputFieldWidth, iconType
         {!! (iconType === "Chat") && <TextInput style={styles.input} autoCorrect={false} inputMode='text' 
         placeholder={placeholder} placeholderTextColor={"#E5E9F0"} returnKeyType='done' selectionColor={"#30C5FF"} />}
     
-    </GestureHandlerRootView>
+    </View>
   );
 }
 
