@@ -1,23 +1,24 @@
-import React from 'react';
-import { View, StyleSheet, Text } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import Logo from '@/components/Logo';
 import InputField from '@/components/InputField';
+import Logo from '@/components/Logo';
+import ProgressBar from '@/components/ProgressBar';
 import Button from '@/components/buttons/Button';
 import buttonStyles from '@/utils/buttonStyles';
-import fonts from '@/utils/fonts';
-import { Link } from 'expo-router';
-import ProgressBar from '@/components/ProgressBar';
 import colors from '@/utils/colors';
-import universalStyles from '@/utils/universalStyles';
-import navigateToNextRegistrationPage from './navigation/router';
+import fonts from '@/utils/fonts';
 import progressBarStyles from '@/utils/progressBarStyles';
+import universalStyles from '@/utils/universalStyles';
+import { Link, useRouter } from 'expo-router';
+import React from 'react';
+import { Text, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 const INPUT_BUTTON_HEIGHT = universalStyles.SCREEN_HEIGHT * 0.05
 const INPUT_BUTTON_WIDTH = universalStyles.SCREEN_WIDTH * 0.90
 
 
 export default function Registration_1() {
+
+  const router = useRouter();
 
   return (
     <SafeAreaProvider>
@@ -46,7 +47,7 @@ export default function Registration_1() {
             <InputField iconType='Passwort' placeholder='Passwort' inputFieldHeight={INPUT_BUTTON_HEIGHT} inputFieldWidth={INPUT_BUTTON_WIDTH} />
         </View>
 
-        <Button buttonHeight={buttonStyles.heights.bigButton} buttonWidth={buttonStyles.widths.bigButton} fontSize={fonts.size.bigButton} label='Weiter' iconPosition={buttonStyles.iconRightPositions.bigButton} iconType='Weiter' iconSize={buttonStyles.iconSizes.bigButton}/>
+        <Button buttonHeight={buttonStyles.heights.bigButton} buttonWidth={buttonStyles.widths.bigButton} buttonFunctionality={() => router.navigate("/registration_2")} fontSize={fonts.size.bigButton} label='Weiter' iconPosition={buttonStyles.iconRightPositions.bigButton} iconType='Weiter' iconSize={buttonStyles.iconSizes.bigButton}/>
         <Text style={universalStyles.styles.textAfterContent}>Du hast bereits ein Konto? <Link href={"/login"} style={universalStyles.styles.boldText}>Anmelden</Link></Text>
         <ProgressBar count={2} firstBarColor={colors.filledBar} secondBarColor={colors.emptyBar} barHeight={progressBarStyles.height} barWidth={progressBarStyles.widths.big} barRadius={progressBarStyles.borderRadius}/>
 
