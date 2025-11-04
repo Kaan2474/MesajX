@@ -1,20 +1,16 @@
-import { StyleSheet, View, Text } from 'react-native';
 import ProfilePicture from '@/components/ProfilePicture';
-import { useRouter } from 'expo-router';
-import Button from './buttons/Button';
 import buttonStyles from '@/utils/buttonStyles';
 import fonts from '@/utils/fonts';
+import { StyleSheet, Text, View } from 'react-native';
+import Button from './buttons/Button';
 
 type Props = {
     initials: string,
     status: string,
     name: string,
-    functionality: () => void
 };
 
-const ROUTER = useRouter();
-
-export default function NewMessageContainer({ initials, status, name, functionality } : Props) {
+export default function NewMessageContainer({ initials, status, name } : Props) {
 
   return (
     <View style={styles.item}>
