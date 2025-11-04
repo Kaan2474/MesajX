@@ -26,12 +26,12 @@ export default function Button({ buttonHeight, buttonWidth, buttonFunctionality,
         {!! (iconType === "Weiter") && <MaterialIcons name="navigate-next" size={iconSize} color={colors.buttonIcon}/>}
         {!! (iconType === "Passwort zurücksetzen") && <MaterialIcons name="lock-reset" size={iconSize} color={colors.buttonIcon} />}
         {!! (iconType === "Speichern") && <Feather name="save" size={iconSize} color={colors.buttonIcon}/>}
-        {!! (iconType === "Freund hinzufügen") && <AntDesign name="adduser" size={iconSize} color={colors.buttonIcon}/>}
+        {!! (iconType === "Freund hinzufügen") && <AntDesign name="user-add" size={iconSize} color={colors.buttonIcon}/>}
         {!! (iconType === "Einstellungen") && <Feather name="settings" size={iconSize} color={colors.buttonIcon} />}
         {!! (iconType === "Chatten") &&  <Ionicons name="chatbubble-ellipses-outline" size={iconSize} color={colors.buttonIcon}/>}
         {!! (iconType === "Entfernen") &&  <AntDesign name="delete" size={iconSize} color={colors.buttonIcon}/>}
         {!! (iconType === "Anfragen") &&  <Octicons name="people" size={iconSize} color={colors.buttonIcon}/>}
-        {!! (iconType === "Foto hochladen") &&  <AntDesign name="pluscircleo" size={iconSize} color={colors.buttonIcon}/> }
+        {!! (iconType === "Foto hochladen") &&  <AntDesign name="plus-circle" size={iconSize} color={colors.buttonIcon}/> }
       </View>
     </Pressable>
   );
