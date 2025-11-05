@@ -1,5 +1,7 @@
 import { StyleSheet, View, Text } from 'react-native';
 import ProfilePicture from '@/components/ProfilePicture';
+import profilePictureStyles from '@/utils/profilePictureStyles';
+import fonts from '@/utils/fonts';
 
 type Props = {
     initials: string,
@@ -11,7 +13,7 @@ export default function FriendRequestContainer({ initials, name } : Props) {
   return (
     <View style={styles.friendRequestContainer}>
         <View style={styles.profilePictureAndNameContainer}>
-            <ProfilePicture size={"medium"} initials={initials}/>
+            <ProfilePicture height={profilePictureStyles.heights.medium} width={profilePictureStyles.widths.medium} radius={profilePictureStyles.radius.medium} fontSize={fonts.size.mediumProfilePicture} initials={initials}/>
             <Text style={styles.name}>{name}</Text>
         </View>
         <View style={styles.acceptDeclineContainer}>

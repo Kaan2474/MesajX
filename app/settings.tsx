@@ -6,6 +6,7 @@ import buttonStyles from '@/utils/buttonStyles';
 import fonts from '@/utils/fonts';
 import InputField from '@/components/InputField';
 import Button from '@/components/buttons/Button';
+import profilePictureStyles from '@/utils/profilePictureStyles';
 
 export default function Settings() {
   return (
@@ -14,7 +15,7 @@ export default function Settings() {
         <Logo withBackButton={true}/>
         
         <View style={styles.profilePictureAddPictureButtonContainer}>
-            <ProfilePicture size='big' initials='KH' />
+            <ProfilePicture height={profilePictureStyles.heights.big} width={profilePictureStyles.widths.big} radius={profilePictureStyles.radius.big} fontSize={fonts.size.bigProfilePicture} initials='KH' />
             <Button buttonHeight={buttonStyles.heights.mediumButton} buttonWidth={buttonStyles.widths.mediumButton} fontSize={fonts.size.mediumButton} label='Foto hochladen' iconPosition={buttonStyles.iconRightPositions.mediumButton} iconType='Foto hochladen' iconSize={buttonStyles.iconSizes.mediumButton}/>
         </View>
 

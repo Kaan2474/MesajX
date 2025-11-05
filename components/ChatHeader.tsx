@@ -2,6 +2,9 @@ import { StyleSheet, View, Text } from 'react-native';
 import { useRouter } from 'expo-router';
 import ProfilePicture from './ProfilePicture';
 import BackButton from './buttons/BackButton';
+import profilePictureStyles from '@/utils/profilePictureStyles';
+import universalStyles from '@/utils/universalStyles';
+import fonts from '@/utils/fonts';
 
 export default function ChatHeader() {
 
@@ -13,7 +16,7 @@ export default function ChatHeader() {
             <BackButton />
 
             <View style={styles.profilePictureNameStatusContainer}>
-                <ProfilePicture status='online' size='medium' initials="AC" />
+                <ProfilePicture status='online' height={profilePictureStyles.heights.medium} width={profilePictureStyles.widths.medium} radius={profilePictureStyles.radius.medium} fontSize={fonts.size.mediumProfilePicture} initials="AC" />
                 <View style={styles.nameStatusContainer}>
                     <Text style={styles.name}>Alkan Cinar</Text>
                     <Text style={styles.status}>Online</Text>

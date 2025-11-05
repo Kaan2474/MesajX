@@ -1,25 +1,30 @@
-import React from 'react';
-import { View, StyleSheet, Text } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import Logo from '@/components/Logo';
 import InputField from '@/components/InputField';
-import Button from '@/components/buttons/Button';
-import { Link } from 'expo-router';
-import ProgressBar from '@/components/ProgressBar';
+import Logo from '@/components/Logo';
 import ProfilePicture from '@/components/ProfilePicture';
-import universalStyles from '@/utils/universalStyles';
+import ProgressBar from '@/components/ProgressBar';
+import Button from '@/components/buttons/Button';
 import buttonStyles from '@/utils/buttonStyles';
+import colors from '@/utils/colors';
 import fonts from '@/utils/fonts';
+import progressBarStyles from '@/utils/progressBarStyles';
+import universalStyles from '@/utils/universalStyles';
+import { Link, useRouter } from 'expo-router';
+import React from 'react';
+import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import profilePictureStyles from '@/utils/profilePictureStyles';
 
 const DESCRIPTION_INPUTFIELD_HEIGHT = universalStyles.SCREEN_HEIGHT * 0.06516587678 //55
 
 export default function Registration_2() {
 
+  const router = useRouter();
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={universalStyles.styles.container}>
 
-        <Logo withBackButton={false}/>
+        <Logo withBackButton={true}/>
 
         <View style={universalStyles.styles.headingContainer}>
             <Text style={universalStyles.styles.headingText}>Fast geschafft!</Text>
@@ -27,8 +32,8 @@ export default function Registration_2() {
         </View>
 
         <View style={styles.profilePictureAddPhotoButtonContainer}>
-            <ProfilePicture size='big' initials='KH'/>
-            <Button buttonHeight={buttonStyles.heights.mediumButton} buttonWidth={buttonStyles.widths.mediumButton} fontSize={fonts.size.mediumButton} label='Foto hochladen' iconPosition={buttonStyles.iconRightPositions.mediumButton} iconType='Foto hochladen' iconSize={buttonStyles.iconSizes.mediumButton}/>
+            <ProfilePicture height={profilePictureStyles.heights.big} width={profilePictureStyles.widths.big} radius={profilePictureStyles.radius.big} fontSize={fonts.size.bigProfilePicture} initials='KH'/>
+            <Button buttonHeight={buttonStyles.heights.mediumButton} buttonWidth={buttonStyles.widths.mediumButton} fontSize={fonts.size.mediumButton} label='Foto hochladen' iconPosition={buttonStyles.iconRightPositions.addPicture} iconSize={buttonStyles.iconSizes.addPicture} iconType='Foto hochladen'/>
         </View>
 
         <View style={universalStyles.styles.inputFieldMargin}>
@@ -37,7 +42,7 @@ export default function Registration_2() {
 
         <Button buttonHeight={buttonStyles.heights.bigButton} buttonWidth={buttonStyles.widths.bigButton} fontSize={fonts.size.bigButton} label='Registrieren' iconPosition={buttonStyles.iconRightPositions.bigButton} iconType='Registrieren' iconSize={buttonStyles.iconSizes.bigButton}/>
         <Text style={universalStyles.styles.textAfterContent}>Du hast bereits ein Konto? <Link href={"/login"} style={universalStyles.styles.boldText}>Anmelden</Link></Text>
-        <ProgressBar firstBarColor='#4A5160' secondBarColor='#30C5FF'/>
+        <ProgressBar count={2} firstBarColor={colors.color_3} secondBarColor={colors.color_4} barHeight={progressBarStyles.height} barWidth={progressBarStyles.widths.big} barRadius={progressBarStyles.borderRadius}/>
 
       </SafeAreaView>
     </SafeAreaProvider>
@@ -50,6 +55,6 @@ const styles = StyleSheet.create({
     width: "100%",
     alignItems: "center",
     justifyContent: "space-evenly",
-    marginBottom: universalStyles.SCREEN_HEIGHT * 0.1137440758,
+    marginBottom: universalStyles.SCREEN_HEIGHT * 0.07109004739,
   },
 });

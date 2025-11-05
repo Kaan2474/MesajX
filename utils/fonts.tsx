@@ -12,7 +12,10 @@ const size = {
     text: scaleFontSize(13),
     twoFactorAuthText: scaleFontSize(60),
     bigButton: scaleFontSize(16),
-    mediumButton: scaleFontSize(13)
+    mediumButton: scaleFontSize(13),
+    bigProfilePicture: scaleFontSize(38.5),
+    mediumProfilePicture: scaleFontSize(23.25),
+    smallProfilePicture: scaleFontSize(19.5)
 }
 
 export default {

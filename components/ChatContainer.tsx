@@ -1,6 +1,8 @@
-import { StyleSheet, View, Text, Pressable } from 'react-native';
 import ProfilePicture from '@/components/ProfilePicture';
+import fonts from '@/utils/fonts';
+import profilePictureStyles from '@/utils/profilePictureStyles';
 import { useRouter } from 'expo-router';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 type Props = {
     initials: string,
@@ -18,7 +20,7 @@ export default function ChatContainer({ initials, status, time, name, message, u
   return (
     <Pressable style={styles.item} onPress={() => ROUTER.navigate("/chat")}>
 
-        <ProfilePicture status={status} size={"small"} initials={initials}/>
+        <ProfilePicture status={status} height={profilePictureStyles.heights.small} width={profilePictureStyles.widths.small} radius={profilePictureStyles.radius.small} fontSize={fonts.size.smallProfilePicture} initials={initials}/>
 
         <View style={styles.nameAndMessageContainer}>
             <Text style={styles.name}>{name}</Text>

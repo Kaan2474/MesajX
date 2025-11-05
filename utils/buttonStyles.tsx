@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import universalStyles from "./universalStyles";
 import colors from "./colors";
+import universalStyles from "./universalStyles";
 
 const BASE_WIDTH = 375;
 
@@ -20,12 +20,14 @@ const widths = {
 
 const iconSizes = {
     bigButton: scaleIconSize(18), //18.72
-    mediumButton: scaleIconSize(15) //15.6
+    mediumButton: scaleIconSize(15), //15.6
+    addPicture: scaleIconSize(12.5) //13
 }
 
 const iconRightPositions = {
     bigButton: universalStyles.SCREEN_WIDTH * 0.03846153846, //15
     mediumButton: universalStyles.SCREEN_WIDTH * 0.01923076923, //7.5
+    addPicture: 5
 }
 
 const styles = StyleSheet.create({
@@ -34,10 +36,10 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: "center",
-      backgroundColor: colors.buttonBackground,
+      backgroundColor: colors.color_4,
     },
     label: {
-      color: colors.buttonText,
+      color: colors.color_5,
       fontWeight: "700",
     },
     icon: {

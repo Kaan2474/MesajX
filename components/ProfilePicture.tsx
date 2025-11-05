@@ -10,13 +10,6 @@ type Props = {
   initials: string,
 };
 
-/*
-Ursprungswerte:
-- small: height, width, borderRadius = 50 / fontSize = 20
-- medium: height, width, borderRadius = 60 / fontSize = 24
-- big: height, width, borderRadius = 100 /fontSize = 40
-*/
-
 export default function ProfilePicture({ status, height, width, radius, fontSize, initials }: Props) {
 
   return (

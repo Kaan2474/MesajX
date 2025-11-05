@@ -5,6 +5,7 @@ import ProfilePicture from '@/components/ProfilePicture';
 import Button from '@/components/buttons/Button';
 import buttonStyles from '@/utils/buttonStyles';
 import fonts from '@/utils/fonts';
+import profilePictureStyles from '@/utils/profilePictureStyles';
 
 export default function Profile() {
   return (
@@ -12,7 +13,7 @@ export default function Profile() {
       <SafeAreaView style={styles.container}>
         <Logo withBackButton={false}/>
         <View style={styles.profilepictureNamesDescriptionContainer}>
-          <ProfilePicture size="big" initials={"KH"} />
+          <ProfilePicture height={profilePictureStyles.heights.big} width={profilePictureStyles.widths.big} radius={profilePictureStyles.radius.big} fontSize={fonts.size.bigProfilePicture} initials={"KH"} />
           <View style={styles.namesContainer}>
             <Text style={styles.name}>Kaan Hisiroglu</Text>
             <Text style={styles.username}>kaan2474</Text>

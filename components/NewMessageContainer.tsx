@@ -1,6 +1,7 @@
 import ProfilePicture from '@/components/ProfilePicture';
 import buttonStyles from '@/utils/buttonStyles';
 import fonts from '@/utils/fonts';
+import profilePictureStyles from '@/utils/profilePictureStyles';
 import { StyleSheet, Text, View } from 'react-native';
 import Button from './buttons/Button';
 
@@ -14,7 +15,7 @@ export default function NewMessageContainer({ initials, status, name } : Props) 
 
   return (
     <View style={styles.item}>
-      <ProfilePicture status={status} size={"small"} initials={initials}/>
+      <ProfilePicture status={status} height={profilePictureStyles.heights.small} width={profilePictureStyles.widths.small} radius={profilePictureStyles.radius.small} fontSize={fonts.size.smallProfilePicture} initials={initials}/>
       <View style={styles.nameContainer}>
         <Text style={styles.name}>{name}</Text>
       </View>

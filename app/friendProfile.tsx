@@ -5,6 +5,7 @@ import ProfilePicture from '@/components/ProfilePicture';
 import buttonStyles from '@/utils/buttonStyles';
 import Button from '@/components/buttons/Button';
 import fonts from '@/utils/fonts';
+import profilePictureStyles from '@/utils/profilePictureStyles';
 
 export default function FriendProfile() {
   return (
@@ -14,7 +15,7 @@ export default function FriendProfile() {
         <Logo withBackButton={true}/>
 
         <View style={styles.profilepictureNamesDescriptionContainer}>
-          <ProfilePicture size="big" initials={"AC"} />
+          <ProfilePicture height={profilePictureStyles.heights.big} width={profilePictureStyles.widths.big} radius={profilePictureStyles.radius.big} fontSize={fonts.size.bigProfilePicture} initials={"AC"} />
           <View style={styles.namesContainer}>
             <Text style={styles.name}>Alkan Cinar</Text>
             <Text style={styles.username}>killeralkan6767</Text>

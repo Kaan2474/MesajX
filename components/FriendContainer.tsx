@@ -1,6 +1,8 @@
 import { StyleSheet, View, Text, Pressable } from 'react-native';
 import ProfilePicture from '@/components/ProfilePicture';
 import { useRouter } from 'expo-router';
+import profilePictureStyles from '@/utils/profilePictureStyles';
+import fonts from '@/utils/fonts';
 
 type Props = {
     initials: string,
@@ -14,7 +16,7 @@ export default function FriendContainer({ initials, status, name } : Props) {
 
   return (
     <Pressable style={styles.item} onPress={() => ROUTER.navigate("/friendProfile")}>
-      <ProfilePicture status={status} size={"small"} initials={initials}/>
+      <ProfilePicture status={status} height={profilePictureStyles.heights.small} width={profilePictureStyles.widths.small} radius={profilePictureStyles.radius.small} fontSize={fonts.size.smallProfilePicture} initials={initials}/>
       <View style={styles.nameContainer}>
         <Text style={styles.name}>{name}</Text>
       </View>
