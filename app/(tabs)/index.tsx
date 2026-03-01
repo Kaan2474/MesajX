@@ -6,6 +6,7 @@ import Logo from '@/components/Logo';
 import ChatContainer from '@/components/ChatContainer';
 import InputField from '@/components/InputField';
 import { useRouter } from 'expo-router';
+import universalStyles from '@/utils/universalStyles';
 
 const DATA = [
   {
@@ -104,12 +105,12 @@ export default function Index() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={universalStyles.styles.container}>
 
         <Logo withBackButton={false}/>
 
-        <View style={styles.searchBarAndButtonWithIconContainer}>
-          <InputField inputFieldHeight={40} inputFieldWidth={303.5} type='Suchen' placeholder="Suche Chat..." />
+        <View style={[universalStyles.styles.searchBar, styles.searchBar]}>
+          <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.SHORTENED_INPUTFIELD_WIDTH} iconType='Suchen' placeholder="Suche Chat..." />
           <IconButton type='Neuer Chat' functionality={navigateToNewMessage}/>
         </View>
 
@@ -125,15 +126,9 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#1F2227',
-    alignItems: "center",
-  },
-  searchBarAndButtonWithIconContainer: {
-    marginTop: 25,
+  searchBar: {
     flexDirection: "row",
-    width: 360,
+    width: universalStyles.SCREEN_WIDTH * 0.9230769231, //360
     justifyContent: "space-between"
   },
 });

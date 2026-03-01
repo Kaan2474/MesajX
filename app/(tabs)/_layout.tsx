@@ -1,22 +1,22 @@
-import { Tabs } from 'expo-router';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import colors from '@/utils/colors';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
   return (
     <Tabs
         screenOptions={{
-            tabBarActiveTintColor: '#30C5FF',
+            tabBarActiveTintColor: colors.color_4,
             headerShown: false,
             tabBarStyle: {
-                backgroundColor: '#1F2227',
+                backgroundColor: colors.color_1,
             }
         }}>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Chats',
-          headerTintColor: "#1F2227",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'chatbubbles-sharp' : 'chatbubbles-outline'} color={color} size={24} />
           ),
@@ -35,7 +35,6 @@ export default function TabLayout() {
         name="friendslist"
         options={{
           title: 'Freunde',
-          headerTintColor: "#1F2227",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'people-sharp' : 'people-outline'} color={color} size={24}/>
           ),
@@ -45,7 +44,6 @@ export default function TabLayout() {
         name="addfriend"
         options={{
           title: 'Freund hinzufügen',
-          headerTintColor: "#1F2227",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'person-add-sharp' : 'person-add-outline'} color={color} size={24}/>
           ),

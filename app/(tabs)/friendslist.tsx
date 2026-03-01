@@ -1,8 +1,9 @@
-import { Text, View, StyleSheet, FlatList } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '@/components/Logo';
 import FriendContainer from '@/components/FriendContainer';
 import InputField from '@/components/InputField';
+import universalStyles from '@/utils/universalStyles';
 
 const DATA = [
   {
@@ -58,14 +59,13 @@ const DATA = [
 export default function Friendslist() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={universalStyles.styles.container}>
 
         <Logo withBackButton={false}/>
 
-        <View style={styles.searchBarContainer}>
-          <InputField inputFieldHeight={40} inputFieldWidth={360} type="Suchen" placeholder='Suche Freunde...' ></InputField>
+        <View style={universalStyles.styles.searchBar}>
+          <InputField inputFieldHeight={universalStyles.INPUTFIELD_BUTTON_HEIGHT} inputFieldWidth={universalStyles.INPUTFIELD_BUTTON_WIDTH} iconType="Suchen" placeholder='Suche Freunde...' ></InputField>
         </View>
-
 
         <FlatList
           data={DATA}
@@ -77,14 +77,3 @@ export default function Friendslist() {
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#1F2227',
-    alignItems: 'center',
-  },
-  searchBarContainer: {
-    marginTop: 25,
-  },
-});
