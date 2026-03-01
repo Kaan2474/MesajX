@@ -1,50 +1,44 @@
-# Welcome to your Expo app 👋
+# MesajX
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Status**: Work-In-Progress (WIP)
 
-## Get started
+MesajX is a mobile messenger application designed for iOS devices. It is built using React Native and Expo, currently focusing on the core user interface and navigation flow.
 
-1. Install dependencies
+## Current State
+The project is currently in the UI/Frontend Prototype phase. Basic navigation and layout for key screens are implemented, but the backend integration (API/Database) is not yet active.
 
-   ```bash
-   npm install
-   ```
+## Completed Screens
+- Authentication: Login and the first stage of Registration are designed with input validation placeholders
+- Navigation: Initial RootLayout using expo-router is set up
+- Settings: A profile management screen allowing for UI-based field edits
+- Messaging: A functional Chat UI template with mock data and a basic message list
 
-2. Start the app
+## Next Steps
+- [ ] Authentication Logic: Integration of a backend to handle user sessions
+- [ ] Registration Flow: Completion of registration_2.tsx and the password recovery flow (passwordForgotten_1/2)
+- [ ] Real-time Messaging: Implement WebSockets or a real-time database to replace the mock DATA in chat.tsx
+- [ ] Profile Picture: Enable actual image uploads for profile pictures
+- [ ] Friend System: Implement the logic for friendRequests.tsx and friendslist.tsx
 
-   ```bash
-    npx expo start
-   ```
+## Installation & Usage
 
-In the output, you'll find options to open the app in a
+**Prerequisites**
+- Node.js installed
+- Expo Go app on your mobile phone or an iOS simulator
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+**Installation**
+1. Clone the repository
+2. Install dependencies
+```console
+npm install
+```
+3. Start the development server
+```console
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Project Structure
+- app/: Contains the main screens and routing logic
+- assets/: Includes the logo and fonts
+- components/: Reusable UI elements like buttons and input fields
+- utils/: Design variables (colors, fonts, sizes) and global style definitions
